@@ -1,0 +1,40 @@
+<html><head><base target="_blank"></head><body><div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/v111jt7/cookieclicker.xml&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>"><iframe width="100%" height="100%" src="https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/v111jt7/cookieclicker.xml" frameborder="0" allowfullscreen=""></iframe></div><button class="c-button" type="button" onclick="PlayTo(this)" style="display: none;">PLAY NOW</button>
+
+<style>
+.c-button {
+  min-width: 100%;
+  font-family: fantasy;
+  appearance: none;
+  border: 1;
+  border-radius: 19px;
+  background: #27114c;
+  color: #fff;
+  padding: 18px 46px;
+  font-size: 42px;
+  cursor: pointer;
+}
+
+.c-button:hover {
+  background: #411b73;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+  
+ .c-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+</style>
+
+<script>
+function PlayTo(sel){
+  var div = sel.previousSibling;
+  div.innerHTML=div.getAttribute('data');
+  sel.style.display = "none";
+}
