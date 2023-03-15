@@ -1,2 +1,1 @@
-hello
-nothing here to see so far
+Get out of here stalker.
