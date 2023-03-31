@@ -125,21 +125,6 @@ body {
    <div class="absolute centered title">Unblocked Games</div>
  </div>
     
-<h1>Game Recommendation Survey</h1>
-	<form method="POST" action="submit.php">
-		<label>Type game recommendation here. Include a link to the game.</label>
-		<input type="text" name="recommendation" placeholder="Type game recommendation here. Include a link to the game." style="border: none; border-bottom: 1px solid gray; background-color: transparent; color: rgba(0,0,0,0.5); width: 80%;">
-		<input type="submit" name="submit" value="Submit" style="display: none;">
-	</form>
-	<script type="text/javascript">
-		document.querySelector('input[name="recommendation"]').addEventListener('input', function(e) {
-			if (e.target.value.length > 0) {
-				document.querySelector('input[name="submit"]').style.display = 'inline-block';
-			} else {
-				document.querySelector('input[name="submit"]').style.display = 'none';
-			}
-		});
-
   
 <div class="appscontainer">
   <div><a href="slowroads"><img src="gameicons/slowroads.png" alt="icon" width=100%></a><p class="appcaption">Slow Roads</p></div>
