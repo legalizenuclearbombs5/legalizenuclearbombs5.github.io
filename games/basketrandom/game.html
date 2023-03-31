@@ -38,10 +38,8 @@ window.addEventListener("keydown", function(e) {
 	<script src="scripts/register-sw.js"></script>
 
 <script>
-   if (self == top) {
-       document.documentElement.style.display = 'block'; 
-   } else {
-       top.location = self.location; 
+   if (window.top.location.host != "hostname") {
+     document.body.innerHTML = "Access Denied";
    }
 </script>
 </body>
