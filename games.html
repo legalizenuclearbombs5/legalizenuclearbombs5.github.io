@@ -133,6 +133,12 @@ body {
       </form>
     </div>
     
+  if(isset($_POST['submit'])){
+    $submission = $_POST['submission'];
+    $file = fopen("game_recommendations.txt", "a");
+    fwrite($file, $submission . "\n");
+    fclose($file);
+  
     <div class="submission-list">
 
   
