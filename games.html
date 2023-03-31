@@ -126,9 +126,28 @@ body {
  </div>
     
   
- <form>
+<style>
+  #submit-btn {
+    display: none;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  #submit-btn:focus {
+    outline: none;
+  }
+  #submit-btn:active {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<form>
   <input type="text" id="game-recommendation" name="game-recommendation" style="border: none; border-bottom: 1px solid white; background-color: transparent; color: white;" oninput="showSubmitButton()" placeholder="Recommend a game. Include a link.">
-  <button type="submit" id="submit-btn" style="display: none; background-color: white; color: black;">Submit</button>
+  <button type="submit" id="submit-btn" onclick="submitRecommendation()">Submit</button>
 </form>
 
 <script>
@@ -143,7 +162,14 @@ body {
       textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
     }
   }
+
+  function submitRecommendation() {
+    // code to handle form submision go here
+
+    event.preventDefault();
+  }
 </script>
+
 
   
 <div class="appscontainer">
