@@ -126,6 +126,27 @@ body {
  </div>
     
   
+  <form>
+  <label for="game-recommendation" style="color: white;">Recommend a game. Include a link.</label>
+  <input type="text" id="game-recommendation" name="game-recommendation" style="border: none; border-bottom: 1px solid white; background-color: transparent; color: white;" oninput="showSubmitButton()">
+  <button type="submit" id="submit-btn" style="display: none; background-color: white; color: white;">Submit</button>
+</form>
+
+<script>
+  function showSubmitButton() {
+    var textBox = document.getElementById("game-recommendation");
+    var submitButton = document.getElementById("submit-btn");
+    if (textBox.value != "") {
+      submitButton.style.display = "inline-block";
+      textBox.removeAttribute("placeholder");
+    } else {
+      submitButton.style.display = "none";
+      textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
+    }
+  }
+</script>
+
+  
 <div class="appscontainer">
   <div><a href="slowroads"><img src="gameicons/slowroads.png" alt="icon" width=100%></a><p class="appcaption">Slow Roads</p></div>
   <div><a href="games/Furry%20Maker"><img src="gameicons/furrymaker.PNG" alt="icon" width=100%></a><p class="appcaption">Furry Maker</p></div>
