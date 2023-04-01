@@ -126,6 +126,8 @@ body {
  </div>
     
   
+    <meta charset="UTF-8">
+    <title>Game Recommendation Form</title>
     <style>
       body {
         color: white;
@@ -189,9 +191,17 @@ body {
   </head>
   <body>
     <form>
-      <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Type a game recommendation here. Include a link.">
-      <input type="submit" id="submit-btn" value="Submit">
+      <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Type a game recommendation here. Include a link." oninput="toggleSubmitButton()">
+      <input type="submit" id="submit-btn" value="Submit" disabled>
     </form>
+
+    <script>
+      function toggleSubmitButton() {
+        const input = document.getElementById("game-recommendation");
+        const submitButton = document.getElementById("submit-btn");
+        submitButton.disabled = input.value.trim() === "";
+      }
+    </script>
 
 
 
