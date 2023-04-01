@@ -126,19 +126,7 @@ body {
  </div>
     
   
- <title>Recommend a Game</title>
   <style>
-    body {
-      background-color: black;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 1vh;
-      top: 400px;
-    }
     #submit-btn {
       display: none;
       background-color: white;
@@ -155,26 +143,25 @@ body {
     #submit-btn:active {
       background-color: #f2f2f2;
     }
+    
     #game-recommendation {
       border: none;
       border-bottom: 1px solid white;
       background-color: transparent;
       color: white;
-      width: 300px;
-      text-align: center;
+      width: 300px; /* Change this value to adjust the width of the text box */
     }
+    
     #game-recommendation::placeholder {
       color: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <label>
-      <input type="text" id="game-recommendation" placeholder="Recommend a game. Include a link." oninput="showSubmitButton()">
-    </label>
-    <button id="submit-btn" onclick="submitRecommendation()">Submit</button>
-  </div>
+  <form>
+    <input type="text" id="game-recommendation" oninput="showSubmitButton()" placeholder="Recommend a game. Include a link.">
+    <input type="submit" id="submit-btn" value="Submit">
+  </form>
   <script>
     function showSubmitButton() {
       var textBox = document.getElementById("game-recommendation");
@@ -186,10 +173,6 @@ body {
         submitButton.style.display = "none";
         textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
       }
-    }
-    function submitRecommendation() {
-      var recommendation = document.getElementById("game-recommendation").value;
-      alert("Thanks for your recommendation: " + recommendation);
     }
   </script>
 
