@@ -139,7 +139,10 @@ body {
       }
       
       form {
-        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         text-align: left;
       }
       
@@ -156,8 +159,7 @@ body {
         width: 300px;
         margin-bottom: 20px;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-right: 10px;
       }
       
       input[type="text"]::placeholder {
@@ -186,7 +188,6 @@ body {
   <body>
     <form>
       <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Type a game recommendation here. Include a link.">
-      <br>
       <input type="submit" id="submit-btn" value="Submit">
     </form>
 
