@@ -126,6 +126,9 @@ body {
  </div>
     
   
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="UTF-8">
     <title>Game Recommendation Form</title>
     <style>
@@ -178,6 +181,7 @@ body {
         padding: 10px 20px;
         cursor: pointer;
         transition: background-color 0.2s;
+        display: none; /* hide the submit button by default */
       }
       
       input[type="submit"]:focus {
@@ -192,14 +196,18 @@ body {
   <body>
     <form>
       <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Type a game recommendation here. Include a link." oninput="toggleSubmitButton()">
-      <input type="submit" id="submit-btn" value="Submit" disabled>
+      <input type="submit" id="submit-btn" value="Submit">
     </form>
 
     <script>
       function toggleSubmitButton() {
-        const input = document.getElementById("game-recommendation");
-        const submitButton = document.getElementById("submit-btn");
-        submitButton.disabled = input.value.trim() === "";
+        const input = document.getElementById("game-recommendation"); // get the input element by ID
+        const submitButton = document.getElementById("submit-btn"); // get the submit button element by ID
+        if (input.value.trim() === "") {
+          submitButton.style.display = "none"; // hide the submit button if the input value is empty or contains only whitespace
+        } else {
+          submitButton.style.display = "inline-block"; // show the submit button if the input value is not empty
+        }
       }
     </script>
 
