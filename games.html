@@ -128,7 +128,8 @@ body {
   
 <style>
   #submit-btn {
-    display: none;
+    display: block;
+    margin: 0 auto;
     background-color: white;
     color: black;
     border: none;
@@ -136,8 +137,6 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
   #submit-btn:focus {
     outline: none;
@@ -145,43 +144,49 @@ body {
   #submit-btn:active {
     background-color: #f2f2f2;
   }
-  
+
   #game-recommendation {
     border: none;
     border-bottom: 1px solid white;
     background-color: transparent;
     color: white;
     width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
   }
-  
+
   #game-recommendation::placeholder {
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  body {
+    background-color: #444;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 </style>
 
 <form>
-  <label for="game-recommendation"></label>
-  <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Recommend a game. Include a link." onkeyup="showSubmitButton()">
-  <br>
+  <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Recommend a game...">
+  <hr>
   <button type="submit" id="submit-btn">Submit</button>
 </form>
 
-<script>
-  function showSubmitButton() {
-    var textBox = document.getElementById("game-recommendation");
-    var submitButton = document.getElementById("submit-btn");
-    if (textBox.value != "") {
-      submitButton.style.display = "inline-block";
-      textBox.removeAttribute("placeholder");
-    } else {
-      submitButton.style.display = "none";
-      textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
-    }
-  }
-</script>
 
 
   
