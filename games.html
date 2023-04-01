@@ -126,55 +126,63 @@ body {
  </div>
     
   
-  <style>
-    #submit-btn {
-      display: none;
-      background-color: white;
-      color: black;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.2s;
+<style>
+  #submit-btn {
+    display: none;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #submit-btn:focus {
+    outline: none;
+  }
+  #submit-btn:active {
+    background-color: #f2f2f2;
+  }
+  
+  #game-recommendation {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  #game-recommendation::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+</style>
+
+<form>
+  <label for="game-recommendation"></label>
+  <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Recommend a game. Include a link." onkeyup="showSubmitButton()">
+  <br>
+  <button type="submit" id="submit-btn">Submit</button>
+</form>
+
+<script>
+  function showSubmitButton() {
+    var textBox = document.getElementById("game-recommendation");
+    var submitButton = document.getElementById("submit-btn");
+    if (textBox.value != "") {
+      submitButton.style.display = "inline-block";
+      textBox.removeAttribute("placeholder");
+    } else {
+      submitButton.style.display = "none";
+      textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
     }
-    #submit-btn:focus {
-      outline: none;
-    }
-    #submit-btn:active {
-      background-color: #f2f2f2;
-    }
-    
-    #game-recommendation {
-      border: none;
-      border-bottom: 1px solid white;
-      background-color: transparent;
-      color: white;
-      width: 300px; /* Change this value to adjust the width of the text box */
-    }
-    
-    #game-recommendation::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  </style>
-</head>
-<body>
-  <form>
-    <input type="text" id="game-recommendation" oninput="showSubmitButton()" placeholder="Recommend a game. Include a link.">
-    <input type="submit" id="submit-btn" value="Submit">
-  </form>
-  <script>
-    function showSubmitButton() {
-      var textBox = document.getElementById("game-recommendation");
-      var submitButton = document.getElementById("submit-btn");
-      if (textBox.value != "") {
-        submitButton.style.display = "inline-block";
-        textBox.removeAttribute("placeholder");
-      } else {
-        submitButton.style.display = "none";
-        textBox.setAttribute("placeholder", "Recommend a game. Include a link.");
-      }
-    }
-  </script>
+  }
+</script>
+
 
   
 <div class="appscontainer">
