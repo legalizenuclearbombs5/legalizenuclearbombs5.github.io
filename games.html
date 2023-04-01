@@ -201,12 +201,12 @@ body {
 
     <script>
       function toggleSubmitButton() {
-        const input = document.getElementById("game-recommendation"); // get the input element by ID
-        const submitButton = document.getElementById("submit-btn"); // get the submit button element by ID
+        const input = document.getElementById("game-recommendation");
+        const submitButton = document.getElementById("submit-btn");
         if (input.value.trim() === "") {
-          submitButton.style.display = "none"; // hide the submit button if the input value is empty or contains only whitespace
+          submitButton.style.display = "none";
         } else {
-          submitButton.style.display = "inline-block"; // show the submit button if the input value is not empty
+          submitButton.style.display = "inline-block";
         }
       }
     </script>
