@@ -126,64 +126,69 @@ body {
  </div>
     
   
-<title>Game Recommendation Form</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+    <title>Game Recommendation Form</title>
+    <style>
+      body {
+        background-color: #444;
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
 
-    form {
-      display: inline-block;
-      margin: 0 auto;
-    }
+      form {
+        display: inline-block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: left;
+      }
 
-    input[type="text"] {
-      border: none;
-      border-bottom: 1px solid white;
-      background-color: transparent;
-      color: white;
-      width: 300px;
-      margin: 20px auto;
-      display: block;
-      text-align: center;
-      padding: 10px;
-    }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
 
-    input[type="submit"] {
-      background-color: white;
-      color: black;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      margin: 20px 10px;
-      display: inline-block;
-    }
+      input[type="text"] {
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: transparent;
+        color: white;
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+      }
 
-    input[type="submit"]:focus {
-      outline: none;
-    }
+      input[type="text"]::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
 
-    input[type="submit"]:active {
-      background-color: #f2f2f2;
-    }
+      input[type="submit"] {
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin-left: 10px;
+      }
 
-    input[type="text"]::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  </style>
-</head>
+      input[type="submit"]:focus {
+        outline: none;
+      }
 
-<body>
-  <h1>Game Recommendation Form</h1>
-
-  <form>
-    <input type="text" id="game-recommendation" placeholder="What's your favorite game?">
-    <input type="submit" id="submit-btn" value="Submit">
-  </form>
+      input[type="submit"]:active {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Game Recommendation Form</h1>
+    <form>
+      <label for="game-recommendation">Recommend a game. Include a link.</label>
+      <input type="text" id="game-recommendation" name="game-recommendation" placeholder="e.g. The Legend of Zelda: Breath of the Wild">
+      <input type="submit" id="submit-btn" value="Submit">
+    </form>
 
 
   
