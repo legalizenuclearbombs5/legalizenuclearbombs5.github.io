@@ -1,0 +1,83 @@
+    <meta charset="UTF-8">
+    <title>Game Recommendation Form</title>
+    <style>
+      body {
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        position: relative;
+        top: 25px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"] {
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: transparent;
+        color: white;
+        width: 300px;
+        margin-bottom: 20px;
+        display: block;
+        margin-right: 10px;
+      }
+      
+      input[type="text"]::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+      input[type="submit"] {
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        display: none;
+        position: relative;
+        bottom: 10px;
+      }
+      
+      input[type="submit"]:focus {
+        outline: none;
+      }
+      
+      input[type="submit"]:active {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://legalizenuclearbombsserverfiles.000webhostapp.com/" method="POST">
+      <input type="text" id="game-recommendation" name="game-recommendation" placeholder="Type a game recommendation here. Include a link." oninput="toggleSubmitButton()">
+      <input type="submit" id="submit-btn" value="Submit">
+    </form>
+
+    <script>
+      function toggleSubmitButton() {
+        const input = document.getElementById("game-recommendation");
+        const submitButton = document.getElementById("submit-btn");
+        if (input.value.trim() === "") {
+          submitButton.style.display = "none";
+        } else {
+          submitButton.style.display = "inline-block";
+        }
+      }
+    </script>
