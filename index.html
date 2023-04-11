@@ -1,138 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3FCMH0MRC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>LNB - NukeNation</title>
 
-  gtag('config', 'G-F3FCMH0MRC');
-</script>
-  <title>LNB - Mathematics</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-  
-.absolute {
-  position: absolute;
-}
-  
-.container {
-  position: relative;
-  text-align: center;
-}
-  
-.centered {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
-  
-.title {
-   font-size: 48px;
-   color: #ffffff;
-   font-weight: bold;
-}
-  
-.bodytext {
-   font-size: 18px;
-   color: #ffffff;
-   width: auto;
-}
-  
-.offset {
-   padding: 15px;
-   top: -25px;
-   left: 30px;
-}
-  
-.timcontainer {
-   display: grid;
-   align-items: center;
-   grid: auto auto/auto auto;
-   column-gap: 5px;
-}
-  
-.button {
-  display: block;
-  border: 1px solid white;
-  border-radius: 8px;
-  color: #ffffff;
-  padding: 10px 28px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: #000000;
-  width: 94%;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #000000;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.topnav a.active {
-  background-color: #222222;
-}
-  
-body {
-  background-color: black;
-}
-  
-</style>
+    <script src="ExportJSONjs.js"></script>
 </head>
-<body>
+<body style="text-align: center">
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: url('Build/NukeNation.jpg') center / cover"></canvas>
+    <script src="Build/NukeNation.loader.js"></script>
+    <script>
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        }
 
-<div class="topnav">
-  <a class="active" href="">Home</a>
-  <a href="games">Unblocked Games</a>
-  <a href="news">LNB News</a>
-  <a href="socials">Socials</a>
-</div>
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/NukeNation.data",
+            frameworkUrl: "Build/NukeNation.framework.js",
+            codeUrl: "Build/NukeNation.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "LegalizeNuclearBombs",
+            productName: "NukeNation",
+            productVersion: "0.1",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        });
+    </script>
 
-<div class="container">
-   <img src="banner.png" alt="banner" width=100%>
-   <div class="absolute centered title">Legalize Nuclear Bombs</div>
- </div>
-  
-<p class="offset bodytext">Follow us on Youtube, TikTok, and join our Discord server!</p>
 
-<div class="offset timcontainer">
-   <div>
-      <img src="bomb1.jpg" alt="bomb" width=100%>
-   </div>
-   <div class="offset" width=100%>
-      <p class="title">OUR MISSION</p>
-      <p class="bodytext">Our goal here at Legalize Nuclear Bombs is to get nuclear bombs to be legal. Support us and join us in the goal of legalizing nuclear bombs!</p>
-   </div>
-   <div class="offset" width=100%>
-      <p class="bodytext">A nuclear weapon (also known as an atom bomb, atomic bomb, nuclear bomb or nuclear warhead, and colloquially as an A-bomb or nuke) is an explosive device that derives its destructive force from nuclear reactions, either fission or a combination of fission and fusion reactions, producing a nuclear explosion. Both bomb types release large quantities of energy from relatively small amounts of matter.</p>
-   </div>
-   <div>
-      <img src="bomb2.jpg" alt="bombxdxdxd" width=100%>
-   </div>
-</div>
-  
-<p class="offset bodytext">A nuclear device no larger than a conventional bomb can devastate an entire city by blast, fire, and radiation. Since they supposedly are weapons of mass destruction, the proliferation of nuclear bombs is a focus of international despute.</p>
-  
-<a href="lnbsupport" class="button">LNB Support</a>
-  
+    <div>
+        <textarea id="save" rows="10" cols="50"></textarea>
+    </div>
+    <div>
+        <button onclick="exportSave()">Export Save</button>
+        <button onclick="importSave()">Import Save</button>
+    </div>
+
+    <script>
+        var saveData = "";
+
+        function handleSaveInput(event) {
+            saveData = event.target.value;
+        }
+
+        function OnSaveDataReceived(saveDataUnity) {
+            // Do something with the save data, such as save it to local storage
+            localStorage.setItem("SaveData", saveDataUnity);
+            saveData = saveDataUnity;
+        }
+
+        function exportSave() {
+            navigator.clipboard.writeText(saveData).then(function () {
+                console.log("Save copied to clipboard");
+            }, function () {
+                console.error("Failed to copy the save to clipboard");
+            });
+        }
+
+        function importSave() {
+            var importedData = prompt("Paste your save here");
+            if (importedData != null) {
+                saveData = importedData;
+                // pass saveData to Unity game here
+                var unityInstance = UnityLoader.instantiate("unity-canvas", "Build/NukeNation.json");
+                unityInstance.SendMessage("Manager", "ReceiveMessage", importedData);
+                return importedData;
+            }
+        }
+
+        // add event listener to textarea
+        document.getElementById("save").addEventListener("input", handleSaveInput);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
-  
+
 </html>
+
+
+
+<!--     <p id="exportData"></p>-->
