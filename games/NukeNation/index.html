@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>LNB - NukeNation</title>
+
+    <script src="ExportJSONjs.js"></script>
+</head>
+<body style="text-align: center">
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: url('Build/NukeNation.jpg') center / cover"></canvas>
+    <script src="Build/NukeNation.loader.js"></script>
+    <script>
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/NukeNation.data",
+            frameworkUrl: "Build/NukeNation.framework.js",
+            codeUrl: "Build/NukeNation.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "LegalizeNuclearBombs",
+            productName: "NukeNation",
+            productVersion: "0.1",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        });
+    </script>
+
+
+    <div>
+        <textarea id="save" rows="10" cols="50"></textarea>
+    </div>
+    <div>
+        <button onclick="exportSave()">Export Save</button>
+        <button onclick="importSave()">Import Save</button>
+    </div>
+
+    <script>
+        var saveData = "";
+
+        function handleSaveInput(event) {
+            saveData = event.target.value;
+        }
+
+        function OnSaveDataReceived(saveDataUnity) {
+            // Do something with the save data, such as save it to local storage
+            localStorage.setItem("SaveData", saveDataUnity);
+            saveData = saveDataUnity;
+        }
+
+        function exportSave() {
+            navigator.clipboard.writeText(saveData).then(function () {
+                console.log("Save copied to clipboard");
+            }, function () {
+                console.error("Failed to copy the save to clipboard");
+            });
+        }
+
+        function importSave() {
+            var importedData = prompt("Paste your save here");
+            if (importedData != null) {
+                saveData = importedData;
+                // pass saveData to Unity game here
+                var unityInstance = UnityLoader.instantiate("unity-canvas", "Build/NukeNation.json");
+                unityInstance.SendMessage("Manager", "ReceiveMessage", importedData);
+                return importedData;
+            }
+        }
+
+        // add event listener to textarea
+        document.getElementById("save").addEventListener("input", handleSaveInput);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!--     <p id="exportData"></p>-->
