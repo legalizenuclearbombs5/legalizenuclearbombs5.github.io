@@ -1,8 +1,10 @@
 <div style="text-align:center;">
   <form onsubmit="return false;">
     <div style="position:relative; display:inline-block;">
-      <input type="text" placeholder="Search" style="background-color:rgba(0,0,0,0); color:white; border:none; border-bottom:1px solid white; padding-left:30px; padding-right:10px;" />
-      <i style="position:absolute; top:8px; left:8px; color:white; font-size:20px;" class="fa fa-search"></i>
+      <span style="position:absolute; top:50%; left:6px; transform: translateY(-50%); color:white; font-size:20px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="currentColor" d="M497.94 458.47L373.52 334.08c30.51-34.5 49.07-79.17 49.07-128.02C422.59 75.09 347.5 0 256 0S89.41 75.09 89.41 166.06s75.09 166.06 166.06 166.06c48.84 0 93.52-18.56 128.02-49.07l124.39 124.39c8.34 8.34 21.83 8.34 30.17 0 8.35-8.34 8.35-21.83 0-30.17zM256 332.12c-66.67 0-120.94-54.27-120.94-120.94s54.27-120.94 120.94-120.94 120.94 54.27 120.94 120.94-54.27 120.94-120.94 120.94z"/></svg>
+      </span>
+      <input type="text" placeholder="Search" style="background-color:rgba(0,0,0,0); color:white; border:none; border-bottom:1px solid white; padding-left:30px; padding-right:10px; margin-left: -5px;" />
     </div>
   </form>
 </div>
