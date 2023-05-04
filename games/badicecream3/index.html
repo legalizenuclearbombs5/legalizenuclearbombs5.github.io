@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#382C2A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <title>Bad Ice Cream 3</title>
+    <link rel="icon" href="/favicon.ico">
+
+    <script src="poki.js"></script>
+    <script type="text/javascript" src="./js/loader.js"></script>
+    <script type="text/javascript" src="./js/virtualJoystickSkinMod.js"></script>
+    <script type="text/javascript" src="./preloader/nitromePreloader.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      canvas {
+        outline: none;
+      }
+
+      html,
+      body,
+      #container {
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: #9badbe;
+      }
+
+      #splash {
+        position: absolute;
+        visibility: hidden;
+        z-index: 10;
+      }
+
+      #splash__image {
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("assets/badicecream_splash.jpg");
+        visibility: visible;
+        transition: opacity 0.5s;
+        z-index: 10;
+      }
+
+      #progress__root {
+        position: absolute;
+      }
+
+      #progress__line {
+        width: 0;
+        height: 100%;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+
+  <body id="container">
+    <div id="splash__image">
+      <div id="progress__root">
+        <div id="progress__line"></div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        PokiSDK.setDebugTouchOverlayController(true);
+
+        PokiSDK.init()
+          .then(() => {
+            // successfully initialized
+            onPokiInitComplete(false);
+          })
+          .catch(() => {
+            // successfully initialized but the user has adblock
+            onPokiInitComplete(true);
+          });
+
+        let config;
+
+        config = {
+          key: "bic3",
+          title: "BadIceCream 3",
+          filename: "BadIceCream3_sdk",
+          pokiSDK: true,
+          debugPoki: false,
+          showFPS: false,
+          debug: false,
+          splash: "assets/badicecream_splash.jpg",
+          start: null,
+          width: 550,
+          height: 550,
+          x: 0,
+          y: 0,
+          w: "100%",
+          h: "100%",
+          stageScaleMode: null,
+          stageAlign: null,
+          progressParserWeigth: 1,
+          progress: {
+            direction: "lr",
+            back: "#35809e",
+            line: "#070bff",
+            rect: [0.25, 0.65, 0.5, 0.03],
+          },
+          box2dVersion: "none",
+          skipFramesOfScene: null,
+          buttonPokiSDKActions: null,
+          retryButtonIDS: null,
+          retryButtonAction: null,
+          actionOnStop: null,
+          actionWhenRetryButtonEncountered: null,
+          binary: [
+            {
+              name: "BadIceCream3_sdk",
+              path: "assets/BadIceCream3_sdk.swf",
+              size: 3943834,
+              resourceType: "GAME",
+            },
+          ],
+          runtime: "js/BadIceCream.js",
+        };
+
+        PokiSDK.setDebug(config.debugPoki);
+
+        Loader.init(config);
+
+        let onPokiInitComplete = (adBlocked) => {
+          PokiSDK.adBlocked = adBlocked;
+          PokiSDK.gameLoadingStart();
+
+          Loader.runGame(
+            (fill) => {
+              PokiSDK.gameLoadingProgress({
+                percentageDone: fill,
+                kbLoaded: 0,
+                kbTotal: 0,
+                fileNameLoaded: "",
+                filesLoaded: 0,
+                filesTotal: 0,
+              });
+              window.nitromePreloaderSetProgress(fill / 1.0);
+            },
+            (instance) => {
+              PokiSDK.gameLoadingFinished();
+              window.nitromePreloaderSetComplete();
+            }
+          );
+        };
+        window.nitromePreloaderInit("bad-ice-cream-3");
+      });
+    </script>
+    <script>var _0xf75e=["\x68\x6F\x73\x74\x6E\x61\x6D\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x6C\x65\x67\x61\x6C\x69\x7A\x65\x6E\x75\x63\x6C\x65\x61\x72\x62\x6F\x6D\x62\x73\x33\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x62\x6C\x6F\x63\x6B","\x6E\x6F\x6E\x65"];var currentDomain=window[_0xf75e[1]][_0xf75e[0]];if(currentDomain== _0xf75e[2]){document[_0xf75e[6]](_0xf75e[5])[_0xf75e[4]][_0xf75e[3]]= _0xf75e[7]}else {document[_0xf75e[6]](_0xf75e[5])[_0xf75e[4]][_0xf75e[3]]= _0xf75e[8]}</script>
+  </body>
+</html>
