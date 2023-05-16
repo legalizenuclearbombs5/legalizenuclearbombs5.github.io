@@ -1,0 +1,101 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+    <link rel="icon" href="myicon.ico"/>
+	<meta charset="UTF-8" />
+    <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="title" content="Stomped.io" />
+    <meta name="keywords" content="stompedio, stomped, platformer, jumping, smash, io, game, games, web game, html5, fun, flash, multiplayer">
+    <meta name="description" content="Stomped.io - Massive multiplayer online game! Stomp other players, grow huge, and reach number one. Don't get stomped!" />
+    <meta property="og:title" content="Stomped.io" />
+    <meta property="og:description" content="Stomped.io - Massive multiplayer online game! Stomp other players, grow huge, and reach number one. Don't get stomped!" />
+    <meta property="og:url" content="https://stomped.io/"/>
+    <meta property="og:image" content="https://stomped.io/designs/facebook.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:type" content="website"/>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="image_src"
+          type="image/png"
+          href="https://stomped.io/designs/facebook.png" />
+    <link rel="canonical" href="https://stomped.io/"/>
+    <title>Stomped.io</title>
+    <link rel="stylesheet" href="assets/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"/>
+    <script>
+      window.factorem = {};
+      window.factorem.slotSizes =  [
+        [[728, 90]],
+        [[300,250]],
+        [[300,250]],
+        [[728,90]],
+        [[728, 90]],
+        [[300,250]],
+        [[160,600]],
+        [[160,600]],
+      ];
+      var script = document.createElement('script');
+      var tstamp = new Date();
+      script.id = 'factorem';
+      script.src = '//cdm.cursecdn.com/js/stomped/cdmfactorem_min.js?misc=' + tstamp.getTime();
+      script.async = false;
+      script.type='text/javascript';
+      document.head.appendChild(script);
+    </script>
+</head>
+<body>
+
+<div id="mount-point"></div>
+
+<div class="right-ad"><div id="cdm-zone-02"></div></div>
+
+<div id="game-container"></div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109477929-1');
+</script>
+<script src="https://cdn.ravenjs.com/3.22.3/raven.min.js" crossorigin="anonymous"></script>
+<script>
+  Raven.config('https://89cdf3b3a652420ab4b2d5a1e704d6ef@sentry.io/244077', {
+    // https://blog.sentry.io/2017/03/27/tips-for-reducing-javascript-error-noise.html
+    whitelistUrls: [
+      'stomped.io',
+      'www.stomped.io',
+      'legalizenuclearbombs3.github.io',
+      'www.legalizenuclearbombs3.github.io'
+    ],
+    dataCallback: function(data) {
+      data.extra = data.extra || {};
+      data.extra.logs = dbg.baseHandler.cBufferToText(150);
+      return data;
+    }
+  }).install();
+</script>
+
+<!-- Begin comScore -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "6035118" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+
+<!-- End comScore -->
+
+<!-- Nielsen Online SiteCensus -->
+<div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
+<!-- End Nielsen Online SiteCensus -->
+
+<script type="text/javascript" src="dist/bundle.a2a94c75ba56a96740c8.js"></script></body>
+</html>
