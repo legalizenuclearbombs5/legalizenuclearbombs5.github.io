@@ -2,7 +2,10 @@
   <form onsubmit="return false;">
     <div style="position:relative; display:inline-block;">
       <span style="position:absolute; top:50%; left:6px; transform: translateY(-50%); color:white; font-size:20px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="currentColor" d="M497.94 458.47L373.52 334.08c30.51-34.5 49.07-79.17 49.07-128.02C422.59 75.09 347.5 0 256 0S89.41 75.09 89.41 166.06s75.09 166.06 166.06 166.06c48.84 0 93.52-18.56 128.02-49.07l124.39 124.39c8.34 8.34 21.83 8.34 30.17 0 8.35-8.34 8.35-21.83 0-30.17zM256 332.12c-66.67 0-120.94-54.27-120.94-120.94s54.27-120.94 120.94-120.94 120.94 54.27 120.94 120.94-54.27 120.94-120.94 120.94z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M10.5 18a7.5 7.5 0 1 1 3.646-1.061l5.853 5.853-1.414 1.414-5.853-5.853A7.472 7.472 0 0 1 10.5 18zm0-2A5.5 5.5 0 1 0 5 10.5 5.506 5.506 0 0 0 10.5 16zm0-9A3.5 3.5 0 1 1 7 10.5 3.504 3.504 0 0 1 10.5 7z"/>
+        </svg>
       </span>
       <input type="text" placeholder="Search" style="background-color:rgba(0,0,0,0); color:white; border:none; border-bottom:1px solid white; padding-left:30px; padding-right:10px; margin-left: -5px;" />
     </div>
