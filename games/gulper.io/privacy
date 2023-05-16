@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>gulper.io | Privacy Policy | Play snake game online for free</title>
+		
+		<meta http-equiv="encoding" content="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Play snake io game online | gulper.io"/>
+<meta property="og:url" content="https://gulper.io"/>
+<meta property="og:site_name" content="gulper.io"/>
+
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+<meta name="theme-color" content="#ffffff">
+
+<link rel="manifest" href="/manifest.json"/>
+
+
+<link rel="shortcut icon" sizes="16x16" href="/images/icon170.png"/>
+<link rel="shortcut icon" sizes="32x32" href="/images/icon170.png"/>
+<link rel="shortcut icon" sizes="64x64" href="/images/icon170.png"/>
+<link rel="apple-touch-icon" href="/images/icon170.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="/images/icon170.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icon170.png">
+<link rel="apple-touch-icon" sizes="167x167" href="/images/icon170.png">
+
+
+		<meta name="description" content="gulper.io Privacy Policy page"/>
+		<link rel="canonical" href="https://gulper.io"/>
+		<link rel="stylesheet" type="text/css" href="/css/all.css"/>
+	</head>
+	<body style="position: static; overflow: auto" class="no-select text-page">
+		<h1 class="title">Privacy Policy</h1>
+		<div class="body">
+	<div class="text">
+		<div class="text-small">Last revised: January 11, 2020</div><br>
+		This document describes the rules for handling customer information, which apply to the <a href="/">gulper.io</a> website and the accompanying apps.<br><br>
+		<h2 class="text-title">Collection of customer information</h2>
+		We may collect some customer information, particularly:<ul class="text-list"><li>Browser version, operating system, IP address and type of device being used.</li><li>In-game statistics, such as final score, playing duration, etc.</li><li>Anonymous crash data.</li></ul><br>
+		Also, we may use certain analytics tools, that collect some additional information, such as:<ul class="text-list"><li>General location (country, state).</li><li>Visit duration.</li><li>Referring websites.</li></ul><br>
+		<h2 class="text-title">Use of customer information</h2>
+		We may use the collected information to:<ul class="text-list"><li>Improve and enhance our product.</li><li>Analyze aggregate usage statistics and general trends.</li><li>Detect, investigate and prevent unauthorised activity.</li></ul><br>
+		<h2 class="text-title">Sharing information with third parties</h2>
+		We do not share any personal or non-personal customer information with third parties.<br><br>
+		<h2 class="text-title">Cookies policy</h2>
+		We use cookies to save you preferred in-game settings between play sessions.
+		Also, our advertising partners may use cookies, that are used by ad servers to recognize a certain device in order to deliver targeted ads, that should be the most interesting for the customer.<br><br>
+		<h2 class="text-title">Changes to the policy</h2>
+		From time to time, we may need to change this policy, though most changes are likely to be minor. In case we change our policy rules, this page will be updated appropriately, so please refer to it for the most recent version.<br><br>
+		<h2 class="text-title">Contact</h2>
+		If you have any questions or comments, you can send an email to <a class="mailto-hello" href="javascript:void(0);">hello@<span style="display: none">=dummy=</span>gulper.io</a>.
+	</div>
+</div>
+
+	</body>
+</html>

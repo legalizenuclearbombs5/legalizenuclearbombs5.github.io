@@ -1,0 +1,19 @@
+{
+	"short_name": "gulper.io",
+	"name": "gulper.io",
+	"icons": [
+		{
+			"src": "/images/icon192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	],
+	"start_url": "/?source=pwa",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"theme_color": "#ffffff",
+	"related_applications": [{
+		"platform": "itunes",
+		"url": "https://itunes.apple.com/app/id1404878134?mt=8"
+	}]
+}
