@@ -1,0 +1,15 @@
+{
+  "short_name": "Stomped.io",
+  "name": "Stomped.io",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#2A0F3F",
+  "theme_color": "#824eb9",
+  "display": "standalone"
+}
