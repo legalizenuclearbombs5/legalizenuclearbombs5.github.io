@@ -73,14 +73,29 @@
    background-color: #000000;
    width: 94%;
  }
-
  .topnav {
    overflow: hidden;
    background-color: #000000;
  }
 
- .topnav a {
+.topnav a.icon {
    float: left;
+   text-align: center;
+   padding: 7px 10px;
+}
+  
+.topnav a.lefttext {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 20px;
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: bold;
+}
+  
+ .topnav a {
+   float: right;
    color: #f2f2f2;
    text-align: center;
    padding: 14px 20px;
@@ -99,9 +114,11 @@
  <body>
 
  <div class="topnav">
-   <a class="active" href="home">Home</a>
+   <a class="icon" href="home"><img src="favicon.ico" height="30px"></a>
+   <a class="lefttext" href="home">Legalize Nuclear Bombs</a>
+   <a class="active" href="other">Other</a>
    <a href="https://legalizenuclearbombs3.github.io">Unblocked Games</a>
-   <a href="other">Other<a>
+   <a href="home">Home</a>
  </div>
 
  <div class="container">
