@@ -93,49 +93,45 @@ figcaption {
   font-size: 11px;
   text-align: center;
 }
- .topnav {
-   overflow: hidden;
-   background-color: #000000;
- }
-
-.topnav a.icon {
-   float: left;
-   text-align: center;
-   padding: 7px 10px;
+.topnav {
+  overflow: hidden; 
+  background-color: #000000;
 }
-  
-.topnav a.lefttext {
-   float: left;
-   color: #f2f2f2;
-   text-align: center;
-   padding: 14px 20px;
-   text-decoration: none;
-   font-size: 16px;
-   font-weight: bold;
+#navicon {
+  float: left;
+  text-align: center;
+  padding: 11px 12px 20px 20px;
+  height: auto;
 }
-  
- .topnav a {
-   float: right;
-   color: #f2f2f2;
-   text-align: center;
-   padding: 14px 20px;
-   text-decoration: none;
-   font-size: 16px;
- }
-
- .topnav a.active {
-   background-color: #222222;
- }
-
- body {
-   background-color: black;
- }
+#lefttext {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+#active {
+  background-color: #222222;
+}
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 21px;
+}
+body {
+  background-color: black;
+}
  </style>
  <body>
 
  <div class="topnav">
-   <a class="icon" href="home"><img src="favicon.ico" height="30px"></a>
-   <a class="lefttext" href="home">Legalize Nuclear Bombs</a>
+   <a id="navicon" href="home"><img src="favicon.ico"></a>
+   <a id="lefttext" href="home">Legalize Nuclear Bombs</a>
    <a href="other">Other</a>
    <a class="active" href="https://legalizenuclearbombs3.github.io">Unblocked Games</a>
    <a href="home">Home</a>
