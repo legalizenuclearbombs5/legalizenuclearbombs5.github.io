@@ -77,37 +77,68 @@
 
       .topnav {
         overflow: hidden;
-        background-color: #000000;
-      }
-
-      #navicon {
-        float: left;
-        text-align: center;
-        padding: 11px 12px 20px 20px;
-        height: auto;
-      }
-
-      #lefttext {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 9px;
-        text-decoration: none;
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      #active {
-        background-color: #222222;
+        background-color: #111111;
       }
 
       .topnav a {
-        float: right;
-        color: #f2f2f2;
+        float: left;
+        display: block;
+        color: white;
         text-align: center;
-        padding: 15px 20px;
+        padding: 14px 16px;
         text-decoration: none;
-        font-size: 21px;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #333333;
+        color: white;
+      }
+
+      .topnav .title {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 11px 13px;
+        font-size: 23px;
+        font-weight: bold;
+      }
+
+      .topnav .icon {
+        float: left;
+        padding: 0px;
+        margin-top: 9px;
+        margin-left: 12px;
+        border: none;
+      }
+
+      .topnav a.active {
+        background-color: #555555;
+        color: white;
+      }
+
+      .topnav .search-container {
+        float: right;
+      }
+
+      .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-radius: 0px;
+      }
+
+      .topnav .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #575757;
+        font-size: 5px;
+        border: none;
+        cursor: pointer;
       }
 
       body {
@@ -120,9 +151,9 @@
         <img src="favicon.ico" height=30px width=30px>
       </a>
       <a class="title">Legalize Nuclear Bombs</a>
-      <a class="active" href="home">Home</a>
-      <a href="games">Game</a>
-      <a href="other">Other</a>
+      <a href="home">Home</a>
+      <a href="legalizenuclearbombs3.github.io">Games</a>
+      <a class="active" href="other">Other</a>
       <div class="search-container">
         <input type="text" placeholder="Search for game.." name="search">
         <button type="submit">
