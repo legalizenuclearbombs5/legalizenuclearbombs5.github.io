@@ -165,11 +165,25 @@
         border: none;
         cursor: pointer;
       }
-      
+
       body {
         background-color: black;
       }
     </style>
+    <script>
+      function search() {
+        var x = document.getElementsByClassName("appcaption");
+        var search = document.getElementById("searchbar").value.toUpperCase();
+        for (let i = 0; i < x.length; i++) {
+          if (x[i].innerHTML.toUpperCase().includes(search)) {
+            x[i].parentElement.style.display = 'block';
+          } else {
+            x[i].parentElement.style.display = 'none';
+          }
+        }
+      }
+    </script>
+  </head>
   <body>
     <div class="topnav">
       <a class="icon">
@@ -181,133 +195,129 @@
       <a href="other">Other</a>
       <div class="search-container">
         <input type="text" placeholder="Search for game.." name="search">
-        <button type="submit"> 
+        <button onclick="search()">
           <img src="search.png" height=20px width=20px>
         </button>
       </div>
-    </div>    
+    </div>
     <div class="container">
       <img src="banner.png" alt="banner" width=100%>
       <div class="absolute centered title">Legalize Nuclear Bombs</div>
     </div>
     <!-- <img src="(image)" style="display:block;margin:auto;width:100%;max-width:100vw;height:auto;cursor:pointer;" onclick="window.location.href='(url)'"> -->
-    <style>
-      .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10vh;
-      }
-    </style>
-    </head>
-    <body>
-      <div class="buttonscontainer">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-4P1EWa8E4ig63Oyl05VNuVVc85rJYDNRmHhXGQBaMuPYYQ/viewform?usp=sf_link" class="button">Recommend a Game</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVgqcurXhwx5pLRoRG1szA-Rf7DbH7bwqeHQr23-jqo6x9pg/viewform?usp=sf_link" class="button">Report an Issue</a>
-      </div>
-      <div class="appscontainer">
-        <!-- <div><a href="games/(game file)"><img src="gameicons/(gami icon)" alt="icon" width=100%></a><p class="appcaption">(game name)</p></div> -->
-  <div><a href="games/cubefield"><img src="gameicons/cubefield.png" alt="icon" width=100%></a><p class="appcaption">Cube Field</p></div>
-  <div><a href="games/pushthesquare"><img src="gameicons/pushtthesquare.png" alt="icon" width=100%></a><p class="appcaption">Push the Square</p></div>
-  <div><a href="games/pushyourluck"><img src="gameicons/pushyourluck.png" alt="icon" width=100%></a><p class="appcaption">Push Your Luck</p></div>
-  <div><a href="games/rabbitsamurai"><img src="gameicons/rabbitsamurai.png" alt="icon" width=100%></a><p class="appcaption">Rabbit Samurai</p></div>
-  <div><a href="games/cuttherope"><img src="gameicons/cuttherope.png" alt="icon" width=100%></a><p class="appcaption">Cut the Rope</p></div>
-  <div><a href="games/Tomb%20of%20the%20mask"><img src="gameicons/tombofthemask.png" alt="icon" width=100%></a><p class="appcaption">Tomb of the Mask</p></div>
-  <div><a href="games/tailofthedragon"><img src="gameicons/tailofthedragon.png" alt="icon" width=100%></a><p class="appcaption">Tail of the Dragon</p></div>
-  <div><a href="games/arcadegolfneon"><img src="gameicons/arcadegolfneon.png" alt="icon" width=100%></a><p class="appcaption">Arcade Golf Neon</p></div>
-  <div><a href="games/bloonstd"><img src="gameicons/bloonstd.png" alt="icon" width=100%></a><p class="appcaption">Bloons Tower Defense</p></div>
-  <div><a href="games/bloonstd2"><img src="gameicons/bloonstd2.png" alt="icon" width=100%></a><p class="appcaption">Bloons Tower Defense 2</p></div>
-  <div><a href="games/mario"><img src="gameicons/mario.png" alt="icon" width=100%></a><p class="appcaption">Mario</p></div>
-  <div><a href="games/thereisnogame"><img src="gameicons/thereisnogame.png" alt="icon" width=100%></a><p class="appcaption">There is no game</p></div>
-  <div><a href="games/mrmine"><img src="gameicons/mrmine.png" alt="icon" width=100%></a><p class="appcaption">Mr. Mine</p></div>
-  <div><a href="games/Stattogories.html"><img src="gameicons/stattogories.png" alt="icon" width=100%></a><p class="appcaption">Stattogories</p></div>
-  <div><a href="games/fryingnemo/index.html"><img src="gameicons/fryingnemo.png" alt="icon" width=100%></a><p class="appcaption">Frying Nemo</p></div>
-  <div><a href="games/googlefeud/index.html"><img src="gameicons/googlefeud.png" alt="icon" width=100%></a><p class="appcaption">Google Feud</p></div>
-  <div><a href="games/circlo/index.html"><img src="gameicons/circlo.png" alt="icon" width=100%></a><p class="appcaption">CircloO</p></div>
-  <div><a href="games/planetlife/index.html"><img src="gameicons/planetlife.png" alt="icon" width=100%></a><p class="appcaption">Planet Life</p></div>
-  <div><a href="games/mindustry/index.html"><img src="gameicons/mindustry.png" alt="icon" width=100%></a><p class="appcaption">Mindustry</p></div>
-  <div><a href="games/cannonbasketball/index.html"><img src="gameicons/cannonbasketball.png" alt="icon" width=100%></a><p class="appcaption">Cannon Basketball</p></div>
-  <div><a href="games/baconmaydie/index.html"><img src="gameicons/baconmaydie.png" alt="icon" width=100%></a><p class="appcaption">Bacon May Die</p></div>
-  <div><a href="games/elasticman/index.html"><img src="gameicons/elasticman.png" alt="icon" width=100%></a><p class="appcaption">Elastic Man</p></div>
-  <div><a href="games/riddletransfer/index.html"><img src="gameicons/riddletransfer.png" alt="icon" width=100%></a><p class="appcaption">Riddle Transfer</p></div>
-  <div><a href="games/riddletransfer2/index.html"><img src="gameicons/riddletransfer2.png" alt="icon" width=100%></a><p class="appcaption">Riddle Transfer 2</p></div>
-  <div><a href="games/learntofly/index.html"><img src="gameicons/ltf.png" alt="icon" width=100%></a><p class="appcaption">Learn To Fly</p></div>
-  <div><a href="games/learntofly2/index.html"><img src="gameicons/ltf2.png" alt="icon" width=100%></a><p class="appcaption">Learn To Fly 2</p></div>
-  <div><a href="games/electricman.html"><img src="gameicons/electricman.png" alt="icon" width=100%></a><p class="appcaption">Electric Man</p></div>
-  <div><a href="games/stickman-hook/index.html"><img src="gameicons/stickmanhook.png" alt="icon" width=100%></a><p class="appcaption">Stickman Hook</p></div>
-  <div><a href="games/badicecream/index.html"><img src="gameicons/bic1.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream</p></div>
-  <div><a href="games/badicecream2/index.html"><img src="gameicons/bic2.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream 2</p></div>
-  <div><a href="games/badicecream3/index.html"><img src="gameicons/bic3.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream 3</p></div>
-  <div><a href="games/craftmine/index.html"><img src="gameicons/craftmine.png" alt="icon" width=100%></a><p class="appcaption">CraftMine</p></div>
-  <div><a href="games/snowballio.html"><img src="gameicons/snowballio.png" alt="icon" width=100%></a><p class="appcaption">Snowball.io</p></div>
-  <div><a href="games/papaspizzaria/index.html"><img src="gameicons/papaspizzaria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Pizzaria</p></div>
-  <div><a href="games/papasburgeria/index.html"><img src="gameicons/papasburgeria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Burgeria</p></div> 
-  <div><a href="games/papasfreezeria/index.html"><img src="gameicons/papasfreezeria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Freezeria</p></div>
-  <div><a href="games/pandemic2/index.html"><img src="gameicons/pandemic2.png" alt="icon" width=100%></a><p class="appcaption">Pandemic 2</p></div>
-  <div><a href="games/ovo.html"><img src="gameicons/ovo.png" alt="icon" width=100%></a><p class="appcaption">OvO</p></div>
-  <div><a href="games/riddleschool/index.html"><img src="gameicons/riddleschool.png" alt="icon" width=100%></a><p class="appcaption">Riddle School</p></div>
-  <div><a href="games/riddleschool2/index.html"><img src="gameicons/riddleschool2.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 2</p></div>
-  <div><a href="games/riddleschool3/index.html"><img src="gameicons/riddleschool3.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 3</p></div>
-  <div><a href="games/riddleschool4/index.html"><img src="gameicons/riddleschool4.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 4</p></div>
-  <div><a href="games/riddleschool5/index.html"><img src="gameicons/riddleschool5.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 5</p></div>
-  <div><a href="games/grindcraft/index.html"><img src="gameicons/grindcraft.png" alt="icon" width=100%></a><p class="appcaption">GrindCraft</p></div>
-  <div><a href="games/Tiny%20Fishing"><img src="gameicons/tinyfishing.png" alt="icon" width=100%></a><p class="appcaption">Tiny Fishing</p></div>
-  <div><a href="games/agesofconflict/index.html"><img src="gameicons/agesofconflict.png" alt="icon" width=100%></a><p class="appcaption">Ages of Conflict</p></div>
-  <div><a href="games/paperio2/index.html"><img src="gameicons/paperio.png" alt="icon" width=100%></a><p class="appcaption">Paper.io</p></div>
-  <div><a href="games/blockthepig/index.html"><img src="gameicons/blockthepig.png" alt="icon" width=100%></a><p class="appcaption">Block the Pig</p></div>
-  <div><a href="games/9007199254740992/index.html"><img src="gameicons/9007199254740992.png" alt="icon" width=100%></a><p class="appcaption">2⁵³</p></div>
-  <div><a href="games/ducklife/index.html"><img src="gameicons/duklif.png" alt="icon" width=100%></a><p class="appcaption">Duck Life</p></div>
-  <div><a href="games/ducklife2/index.html"><img src="gameicons/ducklife2.png" alt="icon" width=100%></a><p class="appcaption">Duck Life 2</p></div>
-  <div><a href="games/ducklife3/index.html"><img src="gameicons/ducklife3.png" alt="icon" width=100%></a><p class="appcaption">Duck Life 3</p></div>
-  <div><a href="games/fireboywatergirl/index.html"><img src="gameicons/fireboywatergirl.png" alt="icon" width=100%></a><p class="appcaption">Fire Boy Water Girl</p></div>
-  <div><a href="games/minecraftbeta/index.html"><img src="gameicons/MEINCRAFT.png" alt="icon" width=100%></a><p class="appcaption">Minecraft Classic</p></div>
-  <div><a href="slowroads"><img src="gameicons/slowroads.png" alt="icon" width=100%></a><p class="appcaption">Slow Roads</p></div>
-  <div><a href="games/Furry%20Maker"><img src="gameicons/furrymaker.PNG" alt="icon" width=100%></a><p class="appcaption">Furry Maker</p></div>
-  <!--<div><a href="games/Tower%20of%20Destiny"><img src="gameicons/towerofdestiny.png" alt="icon" width=100%></a><p class="appcaption">Tower of Destiny</p></div>-->
-  <div><a href="games/Tetris"><img src="gameicons/tetris.PNG" alt="icon" width=100%></a><p class="appcaption">Tetris</p></div>
-  <div><a href="games/2048/index.html"><img src="gameicons/2048.PNG" alt="icon" width=100%></a><p class="appcaption">2048 Game</p></div>
-  <div><a href="games/idle-breakout/index.html"><img src="gameicons/idlebreakout.PNG" alt="icon" width=100%></a><p class="appcaption">Idle Breakout</p></div>
-  <div><a href="games/Slope"><img src="gameicons/slope.png" alt="icon" width=100%></a><p class="appcaption">Slope</p></div>
-  <div><a href="games/Flight%20Simulator"><img src="gameicons/flightsimulator.png" alt="icon" width=100%></a><p class="appcaption">Flight Simulator</p></div>
-  <div><a href="games/Retro%20Bowl"><img src="gameicons/retrobowl.png" alt="icon" width=100%></a><p class="appcaption">Retro Bowl</p></div>
-  <div><a href="games/subway-surfers-ny/index.html"><img src="gameicons/subwaysurfers.png" alt="icon" width=100%></a><p class="appcaption">Subway Surfers</p></div>
-  <div><a href="games/Racing%20Game"><img src="gameicons/racinggame.png" alt="icon" width=100%></a><p class="appcaption">Racing Game</p></div>
-  <div><a href="games/eggycar/game.html"><img src="gameicons/eggycar.png" alt="icon" width=100%></a><p class="appcaption">Eggy Car</p></div>
-  <div><a href="games/Cookie%20Clicker"><img src="gameicons/cookieclicker.png" alt="icon" width=100%></a><p class="appcaption">Cookie Clicker</p></div>
-  <div><a href="games/Appel"><img src="gameicons/appel.png" alt="icon" width=100%></a><p class="appcaption">Appel</p></div>
-  <div><a href="games/Geometry%20Dash"><img src="gameicons/geometrydash.png" alt="icon" width=100%></a><p class="appcaption">Geometry Dash</p></div>
-  <div><a href="games/Basket%20Random"><img src="gameicons/basketrandom.png" alt="icon" width=100%></a><p class="appcaption">Basket Random</p></div>
-  <div><a href="games/Snake"><img src="gameicons/snake.png" alt="icon" width=100%></a><p class="appcaption">Snake</p></div>
-  <div><a href="games/Paper%20Minecraft"><img src="gameicons/paperminecraft.png" alt="icon" width=100%></a><p class="appcaption">Paper Minecraft</p></div>
-  <div><a href="games/Sans%20Fight"><img src="gameicons/sansfight.png" alt="icon" width=100%></a><p class="appcaption">Sans Fight</p></div>
-  <div><a href="games/Volcanic%20Appel"><img src="gameicons/volcanicappel.png" alt="icon" width=100%></a><p class="appcaption">Volcanic Appel</p></div>
-  <div><a href="games/Sonic"><img src="gameicons/sonic.png" alt="icon" width=100%></a><p class="appcaption">Sonic</p></div>
-  <div><a href="games/Hill%20Climb%20Racing"><img src="gameicons/hillclimbracing.png" alt="icon" width=100%></a><p class="appcaption">Hill Climb Racing</p></div>
-  <div><a href="games/Geometry%20Dash%202"><img src="gameicons/geometrydash.png" alt="icon" width=100%></a><p class="appcaption">Geometry Dash 2</p></div>
-  <div><a href="games/World's%20Hardest%20Game"><img src="gameicons/worldshardestgame.png" alt="icon" width=100%></a><p class="appcaption">World's Hardest Game</p></div>
-  <div><a href="https://run3unblocked.github.io"><img src="gameicons/run3.png" alt="icon" width=100%></a><p class="appcaption">Run 3</p></div>
-  <div><a href="games/crossyroad/game.html"><img src="gameicons/crossyroad.png" alt="icon" width=100%></a><p class="appcaption">Crossy Road</p></div>
-  <div><a href="games/Raft%20Wars%202"><img src="gameicons/raftwars2.png" alt="icon" width=100%></a><p class="appcaption">Raft Wars 2</p></div>
-  <div><a href="games/wheely2/game.html"><img src="gameicons/wheely2.png" alt="icon" width=100%></a><p class="appcaption">Wheely 2</p></div>
-  <div><a href="games/Madalin%20Stunt%20Cars"><img src="gameicons/madalinstuntcars.png" alt="icon" width=100%></a><p class="appcaption">Madalin Stunt Cars</p></div>
-  <div><a href="games/motox3m/game.html"><img src="gameicons/motox3m.png" alt="icon" width=100%></a><p class="appcaption">Moto X3M</p></div>
-  <div><a href="games/BitLife"><img src="gameicons/bitlife.png" alt="icon" width=100%></a><p class="appcaption">BitLife</p></div>
-  <div><a href="games/Getting%20Over%20It"><img src="gameicons/gettingoverit.PNG" alt="icon" width=100%></a><p class="appcaption">Getting Over It</p></div>
-  <div><a href="games/8%20Ball%20Pool"><img src="gameicons/8ballpool.png" alt="icon" width=100%></a><p class="appcaption">8 Ball Pool</p></div>
-  <div><a href="games/trafficmania/game.html"><img src="gameicons/trafficmania.png" alt="icon" width=100%></a><p class="appcaption">Traffic Mania</p></div>
-  <div><a href="games/theimpossiblequiz/game.html"><img src="gameicons/impossiblequiz.png" alt="icon" width=100%></a><p class="appcaption">Impossible Quiz</p></div>
-  <div><a href="games/Pong"><img src="gameicons/pong.png" alt="icon" width=100%></a><p class="appcaption">Pong</p></div>
-  <div><a href="games/Duck%20Hunt"><img src="gameicons/duckhunt.png" alt="icon" width=100%></a><p class="appcaption">Duck Hunt</p></div>
-  <div><a href="games/Flappy%20Bird"><img src="gameicons/flappybird.png" alt="icon" width=100%></a><p class="appcaption">Flappy Bird</p></div>
-  <div><a href="games/Arena"><img src="gameicons/arena.PNG" alt="icon" width=100%></a><p class="appcaption">Arena</p></div>
-  <div><a href="games/Geometry%20Dash%203"><img src="gameicons/geometrydash3.PNG" alt="icon" width=100%></a><p class="appcaption">Geometry Dash 3</p></div>
-  <div><a href="games/Kingdom%20of%20Nor"><img src="gameicons/kingdomofnor.PNG" alt="icon" width=100%></a><p class="appcaption">Kingdom of Nor</p></div>
-  <div><a href="games/Monster%20Miners"><img src="gameicons/monsterminers.PNG" alt="icon" width=100%></a><p class="appcaption">Monster Miners</p></div>
-  <div><a href="games/Bouncy%20Heroes"><img src="gameicons/bouncyheroes.PNG" alt="icon" width=100%></a><p class="appcaption">Bouncy Heroes</p></div>
-  <div><a href="games/Avocado%20Pit"><img src="gameicons/avocadopit.PNG" alt="icon" width=100%></a><p class="appcaption">Avocado Pit</p></div>
-  <div><a href="games/Armada"><img src="gameicons/armada.png" alt="icon" width=100%></a><p class="appcaption">Armada</p></div>
-  <div><a href="games/Big%20Tower%20Tiny%20Square"><img src="gameicons/bigtowertinysquare.png" alt="icon" width=100%></a><p class="appcaption">Big Tower Tiny Square</p></div>
-  <div><a href="games/cell-machine/index.html"><img src="gameicons/cellmachine.png" alt="icon" width=100%></a><p class="appcaption">Cell Machine</p></div>
-      </div>
-    </body>
+    <div class="buttonscontainer">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-4P1EWa8E4ig63Oyl05VNuVVc85rJYDNRmHhXGQBaMuPYYQ/viewform?usp=sf_link" class="button">Recommend a Game</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVgqcurXhwx5pLRoRG1szA-Rf7DbH7bwqeHQr23-jqo6x9pg/viewform?usp=sf_link" class="button">Report an Issue</a>
+    </div>
+    <div class="appscontainer">
+      <!-- <div><a href="games/(game file)"><img src="gameicons/(gami icon)" alt="icon" width=100%></a><p class="appcaption">(game name)</p></div> -->
+      <div><a href="games/cubefield"><img src="gameicons/cubefield.png" alt="icon" width=100%></a><p class="appcaption">Cube Field</p></div>
+      <div><a href="games/pushthesquare"><img src="gameicons/pushtthesquare.png" alt="icon" width=100%></a><p class="appcaption">Push the Square</p></div>
+      <div><a href="games/pushyourluck"><img src="gameicons/pushyourluck.png" alt="icon" width=100%></a><p class="appcaption">Push Your Luck</p></div>
+      <div><a href="games/rabbitsamurai"><img src="gameicons/rabbitsamurai.png" alt="icon" width=100%></a><p class="appcaption">Rabbit Samurai</p></div>
+      <div><a href="games/cuttherope"><img src="gameicons/cuttherope.png" alt="icon" width=100%></a><p class="appcaption">Cut the Rope</p></div>
+      <div><a href="games/Tomb%20of%20the%20mask"><img src="gameicons/tombofthemask.png" alt="icon" width=100%></a><p class="appcaption">Tomb of the Mask</p></div>
+      <div><a href="games/tailofthedragon"><img src="gameicons/tailofthedragon.png" alt="icon" width=100%></a><p class="appcaption">Tail of the Dragon</p></div>
+      <div><a href="games/arcadegolfneon"><img src="gameicons/arcadegolfneon.png" alt="icon" width=100%></a><p class="appcaption">Arcade Golf Neon</p></div>
+      <div><a href="games/bloonstd"><img src="gameicons/bloonstd.png" alt="icon" width=100%></a><p class="appcaption">Bloons Tower Defense</p></div>
+      <div><a href="games/bloonstd2"><img src="gameicons/bloonstd2.png" alt="icon" width=100%></a><p class="appcaption">Bloons Tower Defense 2</p></div>
+      <div><a href="games/mario"><img src="gameicons/mario.png" alt="icon" width=100%></a><p class="appcaption">Mario</p></div>
+      <div><a href="games/thereisnogame"><img src="gameicons/thereisnogame.png" alt="icon" width=100%></a><p class="appcaption">There is no game</p></div>    
+      <div><a href="games/mrmine"><img src="gameicons/mrmine.png" alt="icon" width=100%></a><p class="appcaption">Mr. Mine</p></div>
+      <div><a href="games/Stattogories.html"><img src="gameicons/stattogories.png" alt="icon" width=100%></a><p class="appcaption">Stattogories</p></div>
+      <div><a href="games/fryingnemo/index.html"><img src="gameicons/fryingnemo.png" alt="icon" width=100%></a><p class="appcaption">Frying Nemo</p></div>
+      <div><a href="games/googlefeud/index.html"><img src="gameicons/googlefeud.png" alt="icon" width=100%></a><p class="appcaption">Google Feud</p></div>
+      <div><a href="games/circlo/index.html"><img src="gameicons/circlo.png" alt="icon" width=100%></a><p class="appcaption">CircloO</p></div>
+      <div><a href="games/planetlife/index.html"><img src="gameicons/planetlife.png" alt="icon" width=100%></a><p class="appcaption">Planet Life</p></div>
+      <div><a href="games/mindustry/index.html"><img src="gameicons/mindustry.png" alt="icon" width=100%></a><p class="appcaption">Mindustry</p></div>
+      <div><a href="games/cannonbasketball/index.html"><img src="gameicons/cannonbasketball.png" alt="icon" width=100%></a><p class="appcaption">Cannon Basketball</p></div>
+      <div><a href="games/baconmaydie/index.html"><img src="gameicons/baconmaydie.png" alt="icon" width=100%></a><p class="appcaption">Bacon May Die</p></div>
+      <div><a href="games/elasticman/index.html"><img src="gameicons/elasticman.png" alt="icon" width=100%></a><p class="appcaption">Elastic Man</p></div>
+      <div><a href="games/riddletransfer/index.html"><img src="gameicons/riddletransfer.png" alt="icon" width=100%></a><p class="appcaption">Riddle Transfer</p></div>
+      <div><a href="games/riddletransfer2/index.html"><img src="gameicons/riddletransfer2.png" alt="icon" width=100%></a><p class="appcaption">Riddle Transfer 2</p></div>
+      <div><a href="games/learntofly/index.html"><img src="gameicons/ltf.png" alt="icon" width=100%></a><p class="appcaption">Learn To Fly</p></div>
+      <div><a href="games/learntofly2/index.html"><img src="gameicons/ltf2.png" alt="icon" width=100%></a><p class="appcaption">Learn To Fly 2</p></div>
+      <div><a href="games/electricman.html"><img src="gameicons/electricman.png" alt="icon" width=100%></a><p class="appcaption">Electric Man</p></div>
+      <div><a href="games/stickman-hook/index.html"><img src="gameicons/stickmanhook.png" alt="icon" width=100%></a><p class="appcaption">Stickman Hook</p></div>
+      <div><a href="games/badicecream/index.html"><img src="gameicons/bic1.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream</p></div>
+      <div><a href="games/badicecream2/index.html"><img src="gameicons/bic2.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream 2</p></div>
+      <div><a href="games/badicecream3/index.html"><img src="gameicons/bic3.png" alt="icon" width=100%></a><p class="appcaption">Bad Ice Cream 3</p></div>
+      <div><a href="games/craftmine/index.html"><img src="gameicons/craftmine.png" alt="icon" width=100%></a><p class="appcaption">CraftMine</p></div>
+      <div><a href="games/snowballio.html"><img src="gameicons/snowballio.png" alt="icon" width=100%></a><p class="appcaption">Snowball.io</p></div>
+      <div><a href="games/papaspizzaria/index.html"><img src="gameicons/papaspizzaria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Pizzaria</p></div>
+      <div><a href="games/papasburgeria/index.html"><img src="gameicons/papasburgeria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Burgeria</p></div> 
+      <div><a href="games/papasfreezeria/index.html"><img src="gameicons/papasfreezeria.png" alt="icon" width=100%></a><p class="appcaption">Papa's Freezeria</p></div>
+      <div><a href="games/pandemic2/index.html"><img src="gameicons/pandemic2.png" alt="icon" width=100%></a><p class="appcaption">Pandemic 2</p></div>
+      <div><a href="games/ovo.html"><img src="gameicons/ovo.png" alt="icon" width=100%></a><p class="appcaption">OvO</p></div>
+      <div><a href="games/riddleschool/index.html"><img src="gameicons/riddleschool.png" alt="icon" width=100%></a><p class="appcaption">Riddle School</p></div>
+      <div><a href="games/riddleschool2/index.html"><img src="gameicons/riddleschool2.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 2</p></div>
+      <div><a href="games/riddleschool3/index.html"><img src="gameicons/riddleschool3.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 3</p></div>
+      <div><a href="games/riddleschool4/index.html"><img src="gameicons/riddleschool4.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 4</p></div>
+      <div><a href="games/riddleschool5/index.html"><img src="gameicons/riddleschool5.png" alt="icon" width=100%></a><p class="appcaption">Riddle School 5</p></div>
+      <div><a href="games/grindcraft/index.html"><img src="gameicons/grindcraft.png" alt="icon" width=100%></a><p class="appcaption">GrindCraft</p></div>
+      <div><a href="games/Tiny%20Fishing"><img src="gameicons/tinyfishing.png" alt="icon" width=100%></a><p class="appcaption">Tiny Fishing</p></div>
+      <div><a href="games/agesofconflict/index.html"><img src="gameicons/agesofconflict.png" alt="icon" width=100%></a><p class="appcaption">Ages of Conflict</p></div>
+      <div><a href="games/paperio2/index.html"><img src="gameicons/paperio.png" alt="icon" width=100%></a><p class="appcaption">Paper.io</p></div>
+      <div><a href="games/blockthepig/index.html"><img src="gameicons/blockthepig.png" alt="icon" width=100%></a><p class="appcaption">Block the Pig</p></div>  
+      <div><a href="games/9007199254740992/index.html"><img src="gameicons/9007199254740992.png" alt="icon" width=100%></a><p class="appcaption">2⁵³</p></div>
+      <div><a href="games/ducklife/index.html"><img src="gameicons/duklif.png" alt="icon" width=100%></a><p class="appcaption">Duck Life</p></div>
+      <div><a href="games/ducklife2/index.html"><img src="gameicons/ducklife2.png" alt="icon" width=100%></a><p class="appcaption">Duck Life 2</p></div>
+      <div><a href="games/ducklife3/index.html"><img src="gameicons/ducklife3.png" alt="icon" width=100%></a><p class="appcaption">Duck Life 3</p></div>
+      <div><a href="games/fireboywatergirl/index.html"><img src="gameicons/fireboywatergirl.png" alt="icon" width=100%></a><p class="appcaption">Fire Boy Water Girl</p></div>
+      <div><a href="games/minecraftbeta/index.html"><img src="gameicons/MEINCRAFT.png" alt="icon" width=100%></a><p class="appcaption">Minecraft Classic</p></div>
+      <div><a href="slowroads"><img src="gameicons/slowroads.png" alt="icon" width=100%></a><p class="appcaption">Slow Roads</p></div>
+          <div><a href="games/Furry%20Maker"><img src="gameicons/furrymaker.PNG" alt="icon" width=100%></a><p class="appcaption">Furry Maker</p></div>
+      <!--<div><a href="games/Tower%20of%20Destiny"><img src="gameicons/towerofdestiny.png" alt="icon" width=100%></a><p class="appcaption">Tower of Destiny</p></div>-->
+      <div><a href="games/Tetris"><img src="gameicons/tetris.PNG" alt="icon" width=100%></a><p class="appcaption">Tetris</p></div>
+      <div><a href="games/2048/index.html"><img src="gameicons/2048.PNG" alt="icon" width=100%></a><p class="appcaption">2048 Game</p></div>
+      <div><a href="games/idle-breakout/index.html"><img src="gameicons/idlebreakout.PNG" alt="icon" width=100%></a><p class="appcaption">Idle Breakout</p></div>  
+      <div><a href="games/Slope"><img src="gameicons/slope.png" alt="icon" width=100%></a><p class="appcaption">Slope</p></div>
+      <div><a href="games/Flight%20Simulator"><img src="gameicons/flightsimulator.png" alt="icon" width=100%></a><p class="appcaption">Flight Simulator</p></div>
+      <div><a href="games/Retro%20Bowl"><img src="gameicons/retrobowl.png" alt="icon" width=100%></a><p class="appcaption">Retro Bowl</p></div>
+      <div><a href="games/subway-surfers-ny/index.html"><img src="gameicons/subwaysurfers.png" alt="icon" width=100%></a><p class="appcaption">Subway Surfers</p></div>
+      <div><a href="games/Racing%20Game"><img src="gameicons/racinggame.png" alt="icon" width=100%></a><p class="appcaption">Racing Game</p></div>
+      <div><a href="games/eggycar/game.html"><img src="gameicons/eggycar.png" alt="icon" width=100%></a><p class="appcaption">Eggy Car</p></div>
+      <div><a href="games/Cookie%20Clicker"><img src="gameicons/cookieclicker.png" alt="icon" width=100%></a><p class="appcaption">Cookie Clicker</p></div>
+      <div><a href="games/Appel"><img src="gameicons/appel.png" alt="icon" width=100%></a><p class="appcaption">Appel</p></div>
+      <div><a href="games/Geometry%20Dash"><img src="gameicons/geometrydash.png" alt="icon" width=100%></a><p class="appcaption">Geometry Dash</p></div>
+      <div><a href="games/Basket%20Random"><img src="gameicons/basketrandom.png" alt="icon" width=100%></a><p class="appcaption">Basket Random</p></div>
+      <div><a href="games/Snake"><img src="gameicons/snake.png" alt="icon" width=100%></a><p class="appcaption">Snake</p></div>
+      <div><a href="games/Paper%20Minecraft"><img src="gameicons/paperminecraft.png" alt="icon" width=100%></a><p class="appcaption">Paper Minecraft</p></div>
+      <div><a href="games/Sans%20Fight"><img src="gameicons/sansfight.png" alt="icon" width=100%></a><p class="appcaption">Sans Fight</p></div>
+      <div><a href="games/Volcanic%20Appel"><img src="gameicons/volcanicappel.png" alt="icon" width=100%></a><p class="appcaption">Volcanic Appel</p></div>
+      <div><a href="games/Sonic"><img src="gameicons/sonic.png" alt="icon" width=100%></a><p class="appcaption">Sonic</p></div>
+      <div><a href="games/Hill%20Climb%20Racing"><img src="gameicons/hillclimbracing.png" alt="icon" width=100%></a><p class="appcaption">Hill Climb Racing</p></div>
+      <div><a href="games/Geometry%20Dash%202"><img src="gameicons/geometrydash.png" alt="icon" width=100%></a><p class="appcaption">Geometry Dash 2</p></div>
+      <div><a href="games/World's%20Hardest%20Game"><img src="gameicons/worldshardestgame.png" alt="icon" width=100%></a><p class="appcaption">World's Hardest Game</p></div>
+      <div><a href="https://run3unblocked.github.io"><img src="gameicons/run3.png" alt="icon" width=100%></a><p class="appcaption">Run 3</p></div>
+      <div><a href="games/crossyroad/game.html"><img src="gameicons/crossyroad.png" alt="icon" width=100%></a><p class="appcaption">Crossy Road</p></div>
+      <div><a href="games/Raft%20Wars%202"><img src="gameicons/raftwars2.png" alt="icon" width=100%></a><p class="appcaption">Raft Wars 2</p></div>
+      <div><a href="games/wheely2/game.html"><img src="gameicons/wheely2.png" alt="icon" width=100%></a><p class="appcaption">Wheely 2</p></div>
+      <div><a href="games/Madalin%20Stunt%20Cars"><img src="gameicons/madalinstuntcars.png" alt="icon" width=100%></a><p class="appcaption">Madalin Stunt Cars</p></div>
+      <div><a href="games/motox3m/game.html"><img src="gameicons/motox3m.png" alt="icon" width=100%></a><p class="appcaption">Moto X3M</p></div>    
+      <div><a href="games/BitLife"><img src="gameicons/bitlife.png" alt="icon" width=100%></a><p class="appcaption">BitLife</p></div>
+      <div><a href="games/Getting%20Over%20It"><img src="gameicons/gettingoverit.PNG" alt="icon" width=100%></a><p class="appcaption">Getting Over It</p></div>
+      <div><a href="games/8%20Ball%20Pool"><img src="gameicons/8ballpool.png" alt="icon" width=100%></a><p class="appcaption">8 Ball Pool</p></div>
+      <div><a href="games/trafficmania/game.html"><img src="gameicons/trafficmania.png" alt="icon" width=100%></a><p class="appcaption">Traffic Mania</p></div>
+      <div><a href="games/theimpossiblequiz/game.html"><img src="gameicons/impossiblequiz.png" alt="icon" width=100%></a><p class="appcaption">Impossible Quiz</p></div>
+      <div><a href="games/Pong"><img src="gameicons/pong.png" alt="icon" width=100%></a><p class="appcaption">Pong</p></div>    
+      <div><a href="games/Duck%20Hunt"><img src="gameicons/duckhunt.png" alt="icon" width=100%></a><p class="appcaption">Duck Hunt</p></div>
+      <div><a href="games/Flappy%20Bird"><img src="gameicons/flappybird.png" alt="icon" width=100%></a><p class="appcaption">Flappy Bird</p></div>
+      <div><a href="games/Arena"><img src="gameicons/arena.PNG" alt="icon" width=100%></a><p class="appcaption">Arena</p></div>
+      <div><a href="games/Geometry%20Dash%203"><img src="gameicons/geometrydash3.PNG" alt="icon" width=100%></a><p class="appcaption">Geometry Dash 3</p></div>
+      <div><a href="games/Kingdom%20of%20Nor"><img src="gameicons/kingdomofnor.PNG" alt="icon" width=100%></a><p class="appcaption">Kingdom of Nor</p></div>
+      <div><a href="games/Monster%20Miners"><img src="gameicons/monsterminers.PNG" alt="icon" width=100%></a><p class="appcaption">Monster Miners</p></div>
+      <div><a href="games/Bouncy%20Heroes"><img src="gameicons/bouncyheroes.PNG" alt="icon" width=100%></a><p class="appcaption">Bouncy Heroes</p></div>
+      <div><a href="games/Avocado%20Pit"><img src="gameicons/avocadopit.PNG" alt="icon" width=100%></a><p class="appcaption">Avocado Pit</p></div>
+      <div><a href="games/Armada"><img src="gameicons/armada.png" alt="icon" width=100%></a><p class="appcaption">Armada</p></div>
+      <div><a href="games/Big%20Tower%20Tiny%20Square"><img src="gameicons/bigtowertinysquare.png" alt="icon" width=100%></a><p class="appcaption">Big Tower Tiny Square</p></div>
+      <div><a href="games/cell-machine/index.html"><img src="gameicons/cellmachine.png" alt="icon" width=100%></a><p class="appcaption">Cell Machine</p></div>
+
+      
+  	  <div><img src="filler.png" width=100%><p>filler</p></div>
+      <div><img src="filler.png" width=100%><p>filler</p></div>	
+      <div><img src="filler.png" width=100%><p>filler</p></div>
+      <div><img src="filler.png" width=100%><p>filler</p></div>
+      <div><img src="filler.png" width=100%><p>filler</p></div>
+  </body>
 </html>
