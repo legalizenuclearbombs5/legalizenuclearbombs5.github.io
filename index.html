@@ -226,9 +226,37 @@
     	    { link: "craftmine", icon: "", caption: "CraftMine" },
     	    { link: "snowballio.html", icon: "snowballio", caption: "Snowball.io" },
     	    { link: "papaspizzaria", icon: "", caption: "Papa's Pizzaria" },
-    	    { link: "papasburgeria", icon: "", caption: "Papa's Burgeria" }
-	  	  ];
-	  	  function compare(a, b) {
+    	    { link: "papasburgeria", icon: "", caption: "Papa's Burgeria" },
+	    { link: "pandemic2", icon: "", caption: "Pandemic 2" },
+	    { link: "ovo.html", icon: "ovo", caption: "OvO" },
+	    { link: "riddleschool", icon: "", caption: "Riddle School" },
+	    { link: "riddleschool2", icon: "", caption: "Riddle School 2" },
+	    { link: "riddleschool3", icon: "", caption: "Riddle School 3" },
+	    { link: "riddleschool4", icon: "", caption: "Riddle School 4" },
+	    { link: "riddleschool5", icon: "", caption: "Riddle School 5" },
+	    { link: "grindcraft", icon: "", caption: "GrindCraft" },
+	    { link: "Tiny%20Fishing", icon: "tinyfishing", caption: "Tiny Fishing" },
+	    { link: "agesofconflict", icon: "", caption: "Ages of Conflict" },
+	    { link: "paperio2", icon: "paperio", caption: "Paper.io" },
+	    { link: "blockthepig", icon: "", caption: "Block the Pig" },
+	    { link: "9007199254740992", icon: "", caption: "2⁵³" },
+	    { link: "ducklife", icon: "duklif", caption: "Duck Life" },
+	    { link: "ducklife2", icon: "", caption: "Duck Life 2" },
+	    { link: "ducklife3", icon: "", caption: "Duck Life 3" },
+	    { link: "fireboywatergirl", icon: "", caption: "Fire Boy Water Girl" },
+	    { link: "minecraftbeta", icon: "MEINCRAFT", caption: "Minecraft Classic" },
+	    { link: "slowroads", icon: "", caption: "Slow Roads" },
+	    { link: "Furry%20Maker", icon: "furrymaker", caption: "Furry Maker" },
+	    { link: "Tower%20of%20Destiny", icon: "towerofdestiny", caption: "Tower of Destiny" },
+	    { link: "Tetris", icon: "tetris", caption: "Tetris" },
+	    { link: "2048", icon: "", caption: "2048 Game" },
+	    { link: "idle-breakout", icon: "idlebreakout", caption: "Idle Breakout" },
+	    { link: "Slope", icon: "slope", caption: "Slope" },
+	    { link: "Flight%20Simulator", icon: "flightsimulator", caption: "Flight Simulator" },
+	    { link: "Retro%20Bowl", icon: "retrobowl", caption: "Retro Bowl" },
+	    { link: "subway-surfers-ny", icon: "subwaysurfers", caption: "Subway Surfers" }
+	];
+	function compare(a, b) {
       	  if (a.caption < b.caption) {
           	return -1;
       	  }
@@ -248,6 +276,8 @@
           const text = document.createTextNode(games[j].caption);
           if (games[j].link == "run3") {
           	hyperlink.setAttribute("href", "https://run3unblocked.github.io");
+          } else (games[j].link == "slowroads") {
+          	hyperlink.setAttribute("href", "slowroads");
           } else {
           	hyperlink.setAttribute("href", "games/" + games[j].caption);
           }
