@@ -246,11 +246,11 @@
 	    { link: "fireboywatergirl", icon: "", caption: "Fire Boy Water Girl" },
 	    { link: "minecraftbeta", icon: "MEINCRAFT", caption: "Minecraft Classic" },
 	    { link: "slowroads", icon: "", caption: "Slow Roads" },
-	    { link: "Furry%20Maker", icon: "furrymaker", caption: "Furry Maker" },
+	    { link: "Furry%20Maker", icon: "@furrymaker", caption: "Furry Maker" },
 	    { link: "Tower%20of%20Destiny", icon: "towerofdestiny", caption: "Tower of Destiny" },
-	    { link: "Tetris", icon: "tetris", caption: "Tetris" },
-	    { link: "2048", icon: "", caption: "2048 Game" },
-	    { link: "idle-breakout", icon: "idlebreakout", caption: "Idle Breakout" },
+	    { link: "Tetris", icon: "@tetris", caption: "Tetris" },
+	    { link: "2048", icon: "@2048", caption: "2048 Game" },
+	    { link: "idle-breakout", icon: "@idlebreakout", caption: "Idle Breakout" },
 	    { link: "Slope", icon: "slope", caption: "Slope" },
 	    { link: "Flight%20Simulator", icon: "flightsimulator", caption: "Flight Simulator" },
 	    { link: "Retro%20Bowl", icon: "retrobowl", caption: "Retro Bowl" },
@@ -276,19 +276,19 @@
 	    { link: "Madalin%20Stunt%20Cars", icon: "madalinstuntcars", caption: "Madalin Stunt Cars" },
 	    { link: "motox3m/game.html", icon: "motox3m", caption: "Moto X3M" },
 	    { link: "BitLife", icon: "bitlife", caption: "BitLife" },
-	    { link: "Getting%20Over%20It", icon: "gettingoverit", caption: "Getting Over It" },
+	    { link: "Getting%20Over%20It", icon: "@gettingoverit", caption: "Getting Over It" },
 	    { link: "8%20Ball%20Pool", icon: "8ballpool", caption: "8 Ball Pool" },
 	    { link: "trafficmania/game.html", icon: "trafficmania", caption: "Traffic Mania" },
 	    { link: "theimpossiblequiz/game.html", icon: "impossiblequiz", caption: "Impossible Quiz" },
 	    { link: "Pong", icon: "pong", caption: "Pong" },
 	    { link: "Duck%20Hunt", icon: "duckhunt", caption: "Duck Hunt" },
 	    { link: "Flappy%20Bird", icon: "flappybird", caption: "Flappy Bird" },
-	    { link: "Arena", icon: "arena", caption: "Arena" },
-	    { link: "Geometry%20Dash%203", icon: "geometrydash3", caption: "Geometry Dash 3" },
-	    { link: "Kingdom%20of%20Nor", icon: "kingdomofnor", caption: "Kingdom of Nor" },
-	    { link: "Monster%20Miners", icon: "monsterminers", caption: "Monster Miners" },
-	    { link: "Bouncy%20Heroes", icon: "bouncyheroes", caption: "Bouncy Heroes" },
-	    { link: "Avocado%20Pit", icon: "avocadopit", caption: "Avocado Pit" },
+	    { link: "Arena", icon: "@arena", caption: "Arena" },
+	    { link: "Geometry%20Dash%203", icon: "@geometrydash3", caption: "Geometry Dash 3" },
+	    { link: "Kingdom%20of%20Nor", icon: "@kingdomofnor", caption: "Kingdom of Nor" },
+	    { link: "Monster%20Miners", icon: "@monsterminers", caption: "Monster Miners" },
+	    { link: "Bouncy%20Heroes", icon: "@bouncyheroes", caption: "Bouncy Heroes" },
+	    { link: "Avocado%20Pit", icon: "@avocadopit", caption: "Avocado Pit" },
 	    { link: "Armada", icon: "armada", caption: "Armada" },
 	    { link: "Big%20Tower%20Tiny%20Square", icon: "bigtowertinysquare", caption: "Big Tower Tiny Square" },
 	    { link: "cell-machine", icon: "cellmachine", caption: "Cell Machine" }
@@ -319,6 +319,8 @@
           }
           if (games[j].icon == "") {
             img.src = "gameicons/" + games[j].link + ".png"; 
+	  } else if (games[j].icon.startsWith("@")) {
+	    img.src = "gameicons/" + games[j].icon.substring(1) + ".PNG";
           } else {
     	    img.src = "gameicons/" + games[j].icon + ".png";
           }
