@@ -337,24 +337,21 @@
 	}
         addgames(allgamescontainer, allgames)
       });
-      function search() {
-        var x = document.getElementsByClassName("appcaption");
-        var search = document.getElementById("searchbar").value.toUpperCase();
-        for (let i = 0; i < x.length; i++) {
-          if (x[i].innerHTML.toUpperCase().includes(search)) {
-            x[i].parentElement.style.display = 'block';
-          } else {
-            x[i].parentElement.style.display = 'none';
-          }
+function search(event) {
+    event.preventDefault();
+    var x = document.getElementsByClassName("appcaption");
+    var search = document.getElementById("searchbar").value.toUpperCase();
+    for (let i = 0; i < x.length; i++) {
+        if (x[i].innerHTML.toUpperCase().includes(search)) {
+            x[i].style.display = 'block';
+        } else {
+            x[i].style.display = 'none';
         }
-      }
-document.getElementById("searchbar").addEventListener("keydown", function(event) {
-   
-    if (event.keyCode === 13) {
-     
-        search();
     }
-});
+}
+
+document.getElementById("searchForm").addEventListener("submit", search);
+
 	    
     </script>
   </head>
