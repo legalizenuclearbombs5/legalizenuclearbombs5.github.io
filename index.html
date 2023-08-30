@@ -348,6 +348,17 @@
           }
         }
       }
+document.getElementById("searchbar").addEventListener("keydown", function(event) {
+   
+    if (event.keyCode === 13) {
+     
+        event.preventDefault();
+        
+     
+        search();
+    }
+});
+	    
     </script>
   </head>
   <body>
