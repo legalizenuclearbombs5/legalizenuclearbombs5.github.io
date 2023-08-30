@@ -190,7 +190,8 @@
       }
     </style>
     <script>
-      var allgames = [
+      document.addEventListener("DOMContentLoaded", function () {
+        var allgames = [
     	    { link: "cubefield", icon: "", caption: "Cube Field" },
     	    { link: "pushthesquare", icon: "pushtthesquare", caption: "Push the Square" },
     	    { link: "pushyourluck", icon: "", caption: "Push Your Luck" },
@@ -291,51 +292,50 @@
 	    { link: "Armada", icon: "armada", caption: "Armada" },
 	    { link: "Big%20Tower%20Tiny%20Square", icon: "bigtowertinysquare", caption: "Big Tower Tiny Square" },
 	    { link: "cell-machine", icon: "cellmachine", caption: "Cell Machine" }
-     ];
-     function compare(a, b) {
-      	if (a.caption < b.caption) {
-          return -1;
-      	}
-   	if (a.caption > b.caption) {
-          return 1;
-      	}
-    	return 0;
-     }
-     var allgamescontainer = document.getElementById("appscontainer");
-     function addgames(container, games) {
-	games.sort(compare);
-	for (let j = 0; j < games.length; j++) {
-    	  const div = document.createElement("div");
-          const hyperlink = document.createElement("a");
-    	  const img = document.createElement("img");
-          const appcaption = document.createElement("p");
-          const text = document.createTextNode(games[j].caption);
-          if (games[j].link == "run3") {
-            hyperlink.setAttribute("href", "https://run3unblocked.github.io");
-          } else if (games[j].link == "slowroads") {
-            hyperlink.setAttribute("href", "slowroads");
-          } else {
-            hyperlink.setAttribute("href", "games/" + games[j].caption);
-          }
-          if (games[j].icon == "") {
-            img.src = "gameicons/" + games[j].link + ".png"; 
-	  } else if (games[j].icon.startsWith("@")) {
-	    img.src = "gameicons/" + games[j].icon.substring(1) + ".PNG";
-          } else {
-    	    img.src = "gameicons/" + games[j].icon + ".png";
-          }
-    	  img.alt = games[j].caption;
-          img.style.width = "100%";
-          appcaption.classList.add("appcaption");
-          appcaption.appendChild(text)
-          hyperlink.appendChild(img);
-    	  div.appendChild(hyperlink);
-          div.appendChild(appcaption);
-    	  container.appendChild(div);
+       ];
+       function compare(a, b) {
+      	 if (a.caption < b.caption) {
+           return -1;
+      	 }
+   	 if (a.caption > b.caption) {
+           return 1;
+      	 }
+    	 return 0;
+       }
+       var allgamescontainer = document.getElementById("appscontainer");
+       function addgames(container, games) {
+	 games.sort(compare);
+	 for (let j = 0; j < games.length; j++) {
+    	   const div = document.createElement("div");
+           const hyperlink = document.createElement("a");
+    	   const img = document.createElement("img");
+           const appcaption = document.createElement("p");
+           const text = document.createTextNode(games[j].caption);
+           if (games[j].link == "run3") {
+             hyperlink.setAttribute("href", "https://run3unblocked.github.io");
+           } else if (games[j].link == "slowroads") {
+             hyperlink.setAttribute("href", "slowroads");
+           } else {
+             hyperlink.setAttribute("href", "games/" + games[j].caption);
+           }
+           if (games[j].icon == "") {
+             img.src = "gameicons/" + games[j].link + ".png"; 
+	   } else if (games[j].icon.startsWith("@")) {
+	     img.src = "gameicons/" + games[j].icon.substring(1) + ".PNG";
+           } else {
+    	     img.src = "gameicons/" + games[j].icon + ".png";
+           }
+    	   img.alt = games[j].caption;
+           img.style.width = "100%";
+           appcaption.classList.add("appcaption");
+           appcaption.appendChild(text)
+           hyperlink.appendChild(img);
+    	   div.appendChild(hyperlink);
+           div.appendChild(appcaption);
+    	   container.appendChild(div);
+	 }
 	}
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-	addgames(allgamescontainer, allgames)
+        addgames(allgamescontainer, allgames)
       });
       function search() {
         var x = document.getElementsByClassName("appcaption");
