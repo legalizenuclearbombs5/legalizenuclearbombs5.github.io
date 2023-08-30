@@ -239,7 +239,7 @@
 	    { link: "agesofconflict", icon: "", caption: "Ages of Conflict" },
 	    { link: "paperio2", icon: "paperio", caption: "Paper.io" },
 	    { link: "blockthepig", icon: "", caption: "Block the Pig" },
-	    { link: "9007199254740992", icon: "", caption: "2⁵³" },
+	    { link: "9007199254740992", icon: "", caption: "2^53" },
 	    { link: "ducklife", icon: "duklif", caption: "Duck Life" },
 	    { link: "ducklife2", icon: "", caption: "Duck Life 2" },
 	    { link: "ducklife3", icon: "", caption: "Duck Life 3" },
@@ -258,43 +258,42 @@
 	];
 	function compare(a, b) {
       	  if (a.caption < b.caption) {
-          	return -1;
+            return -1;
       	  }
-   	  	  if (a.caption > b.caption) {
+   	  if (a.caption > b.caption) {
             return 1;
       	  }
     	    return 0;
-	      }
-
-	      var container = document.getElementById("appscontainer");
-	      games.sort(compare);
-	      for (let j = 0; j < games.length; j++) {
-    	    const div = document.createElement("div");
+	  }
+	var container = document.getElementById("appscontainer");
+	games.sort(compare);
+	for (let j = 0; j < games.length; j++) {
+    	  const div = document.createElement("div");
           const hyperlink = document.createElement("a");
-    	    const img = document.createElement("img");
+    	  const img = document.createElement("img");
           const appcaption = document.createElement("p");
           const text = document.createTextNode(games[j].caption);
           if (games[j].link == "run3") {
-          	hyperlink.setAttribute("href", "https://run3unblocked.github.io");
+            hyperlink.setAttribute("href", "https://run3unblocked.github.io");
           } else (games[j].link == "slowroads") {
-          	hyperlink.setAttribute("href", "slowroads");
+            hyperlink.setAttribute("href", "slowroads");
           } else {
-          	hyperlink.setAttribute("href", "games/" + games[j].caption);
+            hyperlink.setAttribute("href", "games/" + games[j].caption);
           }
           if (games[j].icon == "") {
             img.src = "gameicons/" + games[j].link + ".png"; 
           } else {
-    	      img.src = "gameicons/" + games[j].icon + ".png";
+    	    img.src = "gameicons/" + games[j].icon + ".png";
           }
-    	    img.alt = games[j].caption;
+    	  img.alt = games[j].caption;
           img.style.width = "100%";
           appcaption.classList.add("appcaption");
           appcaption.appendChild(text)
           hyperlink.appendChild(img);
-    	    div.appendChild(hyperlink);
+    	  div.appendChild(hyperlink);
           div.appendChild(appcaption);
-    	    container.appendChild(div);
-	      }
+    	  container.appendChild(div);
+	}
       });
       function search() {
         var x = document.getElementsByClassName("appcaption");
