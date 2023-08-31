@@ -357,9 +357,9 @@
         var search = document.getElementById("searchbar").value.toUpperCase();
         for (let i = 0; i < x.length; i++) {
           if (x[i].innerHTML.toUpperCase().includes(search)) {
-            x[i].style.display = 'block';
+            x[i].parentElement.style.display = 'block';
           } else {
-            x[i].style.display = 'none';
+            x[i].parentElement.style.display = 'none';
           }
     	}
       }
