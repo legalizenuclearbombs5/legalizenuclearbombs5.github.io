@@ -351,21 +351,17 @@
         addgames(allgamescontainer, allgames)
 	addgames(newcontainer, newgames)
       });
-function search(event) {
-    event.preventDefault();
-    var x = document.getElementsByClassName("appcaption");
-    var search = document.getElementById("searchbar").value.toUpperCase();
-    for (let i = 0; i < x.length; i++) {
-        if (x[i].innerHTML.toUpperCase().includes(search)) {
+      function search() {
+        var x = document.getElementsByClassName("appcaption");
+        var search = document.getElementById("searchbar").value.toUpperCase();
+        for (let i = 0; i < x.length; i++) {
+          if (x[i].innerHTML.toUpperCase().includes(search)) {
             x[i].style.display = 'block';
-        } else {
+          } else {
             x[i].style.display = 'none';
-        }
-    }
-}
-
-document.getElementById("searchForm").addEventListener("submit", search);
-
+          }
+    	}
+      }
 	    
     </script>
   </head>
