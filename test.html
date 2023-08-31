@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3FCMH0MRC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -172,7 +172,17 @@
         border: none;
         cursor: pointer;
       }
-      
+      .important-message {
+        text-align: center;
+        background-color: transparent;
+        margin-top: 20px;
+      }
+
+      .important-text {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px; /* Adjust this value to control the spacing */
       }
 
       .important-description {
@@ -185,7 +195,173 @@
       }
     </style>
     <script>
-      
+      document.addEventListener("DOMContentLoaded", function () {
+	      
+	var newgames = [
+	    { link: "fnf", icon: "", caption: "Friday Night Funkin'" },
+	    { link: "myrustysubmarine", icon: "", caption: "My Rusty Submarine" }
+	];
+
+        var allgames = [
+    	    { link: "cubefield", icon: "", caption: "Cube Field" },
+    	    { link: "pushthesquare", icon: "pushtthesquare", caption: "Push the Square" },
+    	    { link: "pushyourluck", icon: "", caption: "Push Your Luck" },
+    	    { link: "rabbitsamurai", icon: "", caption: "Rabbit Samurai" },
+    	    { link: "cuttherope", icon: "", caption: "Cut the Rope" },
+    	    { link: "Tomb%20of%20the%20mask", icon: "tombofthemask", caption: "Tomb of the Mask" },
+    	    { link: "tailofthedragon", icon: "", caption: "Tail of the Dragon" },
+    	    { link: "arcadegolfneon", icon: "", caption: "Arcade Golf Neon" },
+    	    { link: "bloonstd", icon: "", caption: "Bloons Tower Defense" },
+    	    { link: "bloonstd2", icon: "bloonstd2", caption: "Bloons Tower Defense 2" },
+    	    { link: "mario", icon: "", caption: "Mario" },
+    	    { link: "thereisnogame", icon: "", caption: "There is no game" },
+    	    { link: "mrmine", icon: "", caption: "Mr. Mine" },
+    	    { link: "Stattogories.html", icon: "stattogories", caption: "Stattogories" },
+    	    { link: "fryingnemo", icon: "", caption: "Frying Nemo" },
+    	    { link: "googlefeud", icon: "", caption: "Google Feud" },
+    	    { link: "circlo", icon: "", caption: "CircloO" },
+    	    { link: "planetlife", icon: "", caption: "Planet Life" },
+    	    { link: "mindustry", icon: "", caption: "Mindustry" },
+    	    { link: "cannonbasketball", icon: "", caption: "Cannon Basketball" },
+    	    { link: "baconmaydie", icon: "", caption: "Bacon May Die" },
+    	    { link: "elasticman", icon: "", caption: "Elastic Man" },
+    	    { link: "riddletransfer", icon: "", caption: "Riddle Transfer" },
+    	    { link: "riddletransfer2", icon: "", caption: "Riddle Transfer 2" },
+    	    { link: "learntofly", icon: "ltf", caption: "Learn To Fly" },
+    	    { link: "learntofly2", icon: "ltf2", caption: "Learn To Fly 2" },
+    	    { link: "electricman.html", icon: "electricman", caption: "Electric Man" },
+    	    { link: "stickman-hook", icon: "stickmanhook", caption: "Stickman Hook" },
+    	    { link: "badicecream", icon: "bic1", caption: "Bad Ice Cream" },
+    	    { link: "badicecream2", icon: "bic2", caption: "Bad Ice Cream 2" },
+    	    { link: "badicecream3", icon: "bic3", caption: "Bad Ice Cream 3" },
+    	    { link: "craftmine", icon: "", caption: "CraftMine" },
+    	    { link: "snowballio.html", icon: "snowballio", caption: "Snowball.io" },
+    	    { link: "papaspizzaria", icon: "", caption: "Papa's Pizzaria" },
+    	    { link: "papasburgeria", icon: "", caption: "Papa's Burgeria" },
+	    { link: "pandemic2", icon: "", caption: "Pandemic 2" },
+	    { link: "ovo.html", icon: "ovo", caption: "OvO" },
+	    { link: "riddleschool", icon: "", caption: "Riddle School" },
+	    { link: "riddleschool2", icon: "", caption: "Riddle School 2" },
+	    { link: "riddleschool3", icon: "", caption: "Riddle School 3" },
+	    { link: "riddleschool4", icon: "", caption: "Riddle School 4" },
+	    { link: "riddleschool5", icon: "", caption: "Riddle School 5" },
+	    { link: "grindcraft", icon: "", caption: "GrindCraft" },
+	    { link: "Tiny%20Fishing", icon: "tinyfishing", caption: "Tiny Fishing" },
+	    { link: "agesofconflict", icon: "", caption: "Ages of Conflict" },
+	    { link: "paperio2", icon: "paperio", caption: "Paper.io" },
+	    { link: "blockthepig", icon: "", caption: "Block the Pig" },
+	    { link: "9007199254740992", icon: "", caption: "2^53" },
+	    { link: "ducklife", icon: "duklif", caption: "Duck Life" },
+	    { link: "ducklife2", icon: "", caption: "Duck Life 2" },
+	    { link: "ducklife3", icon: "", caption: "Duck Life 3" },
+	    { link: "fireboywatergirl", icon: "", caption: "Fire Boy Water Girl" },
+	    { link: "minecraftbeta", icon: "MEINCRAFT", caption: "Minecraft Classic" },
+	    { link: "slowroads", icon: "", caption: "Slow Roads" },
+	    { link: "Furry%20Maker", icon: "@furrymaker", caption: "Furry Maker" },
+	    { link: "Tower%20of%20Destiny", icon: "towerofdestiny", caption: "Tower of Destiny" },
+	    { link: "Tetris", icon: "@tetris", caption: "Tetris" },
+	    { link: "2048", icon: "@2048", caption: "2048 Game" },
+	    { link: "idle-breakout", icon: "@idlebreakout", caption: "Idle Breakout" },
+	    { link: "Slope", icon: "slope", caption: "Slope" },
+	    { link: "Flight%20Simulator", icon: "flightsimulator", caption: "Flight Simulator" },
+	    { link: "Retro%20Bowl", icon: "retrobowl", caption: "Retro Bowl" },
+	    { link: "subway-surfers-ny", icon: "subwaysurfers", caption: "Subway Surfers" },
+	    { link: "Racing%20Game", icon: "racinggame", caption: "Racing Game" },
+	    { link: "eggycar/game.html", icon: "eggycar", caption: "Eggy Car" },
+	    { link: "Cookie%20Clicker", icon: "cookieclicker", caption: "Cookie Clicker" },
+	    { link: "Appel", icon: "appel", caption: "Appel" },
+	    { link: "Geometry%20Dash", icon: "geometrydash", caption: "Geometry Dash" },
+	    { link: "Basket%20Random", icon: "basketrandom", caption: "Basket Random" },
+	    { link: "Snake", icon: "snake", caption: "Snake" },
+	    { link: "Paper%20Minecraft", icon: "paperminecraft", caption: "Paper Minecraft" },
+	    { link: "Sans%20Fight", icon: "sansfight", caption: "Sans Fight" },
+	    { link: "Volcanic%20Appel", icon: "volcanicappel", caption: "Volcanic Appel" },
+	    { link: "Sonic", icon: "sonic", caption: "Sonic" },
+	    { link: "Hill%20Climb%20Racing", icon: "hillclimbracing", caption: "Hill Climb Racing" },
+	    { link: "Geometry%20Dash%202", icon: "geometrydash", caption: "Geometry Dash 2" },
+	    { link: "World's%20Hardest%20Game", icon: "worldshardestgame", caption: "World's Hardest Game" },
+	    { link: "run3", icon: "", caption: "Run 3" },
+	    { link: "crossyroad/game.html", icon: "crossyroad", caption: "Crossy Road" },
+	    { link: "Raft%20Wars%202", icon: "raftwars2", caption: "Raft Wars 2" },
+	    { link: "wheely2/game.html", icon: "wheely2", caption: "Wheely 2" },
+	    { link: "Madalin%20Stunt%20Cars", icon: "madalinstuntcars", caption: "Madalin Stunt Cars" },
+	    { link: "motox3m/game.html", icon: "motox3m", caption: "Moto X3M" },
+	    { link: "BitLife", icon: "bitlife", caption: "BitLife" },
+	    { link: "Getting%20Over%20It", icon: "@gettingoverit", caption: "Getting Over It" },
+	    { link: "8%20Ball%20Pool", icon: "8ballpool", caption: "8 Ball Pool" },
+	    { link: "trafficmania/game.html", icon: "trafficmania", caption: "Traffic Mania" },
+	    { link: "theimpossiblequiz/game.html", icon: "impossiblequiz", caption: "Impossible Quiz" },
+	    { link: "Pong", icon: "pong", caption: "Pong" },
+	    { link: "Duck%20Hunt", icon: "duckhunt", caption: "Duck Hunt" },
+	    { link: "Flappy%20Bird", icon: "flappybird", caption: "Flappy Bird" },
+	    { link: "Arena", icon: "@arena", caption: "Arena" },
+	    { link: "Geometry%20Dash%203", icon: "@geometrydash3", caption: "Geometry Dash 3" },
+	    { link: "Kingdom%20of%20Nor", icon: "@kingdomofnor", caption: "Kingdom of Nor" },
+	    { link: "Monster%20Miners", icon: "@monsterminers", caption: "Monster Miners" },
+	    { link: "Bouncy%20Heroes", icon: "@bouncyheroes", caption: "Bouncy Heroes" },
+	    { link: "Avocado%20Pit", icon: "@avocadopit", caption: "Avocado Pit" },
+	    { link: "Armada", icon: "armada", caption: "Armada" },
+	    { link: "Big%20Tower%20Tiny%20Square", icon: "bigtowertinysquare", caption: "Big Tower Tiny Square" },
+	    { link: "cell-machine", icon: "cellmachine", caption: "Cell Machine" }
+       ];
+       function compare(a, b) {
+      	 if (a.caption < b.caption) {
+           return -1;
+      	 }
+   	 if (a.caption > b.caption) {
+           return 1;
+      	 }
+    	 return 0;
+       }
+       var allgamescontainer = document.getElementById("appscontainer");
+       var newgamescontainer = document.getElementById("newcontainer");
+       function addgames(container, games) {
+	 games.sort(compare);
+	 for (let j = 0; j < games.length; j++) {
+    	   const div = document.createElement("div");
+           const hyperlink = document.createElement("a");
+    	   const img = document.createElement("img");
+           const appcaption = document.createElement("p");
+           const text = document.createTextNode(games[j].caption);
+           if (games[j].link == "run3") {
+             hyperlink.setAttribute("href", "https://run3unblocked.github.io");
+           } else if (games[j].link == "slowroads") {
+             hyperlink.setAttribute("href", "slowroads");
+           } else {
+             hyperlink.setAttribute("href", "games/" + games[j].link);
+           }
+           if (games[j].icon == "") {
+             img.src = "gameicons/" + games[j].link + ".png"; 
+	   } else if (games[j].icon.startsWith("@")) {
+	     img.src = "gameicons/" + games[j].icon.substring(1) + ".PNG";
+           } else {
+    	     img.src = "gameicons/" + games[j].icon + ".png";
+           }
+    	   img.alt = games[j].caption;
+           img.style.width = "100%";
+           appcaption.classList.add("appcaption");
+           appcaption.appendChild(text)
+           hyperlink.appendChild(img);
+    	   div.appendChild(hyperlink);
+           div.appendChild(appcaption);
+    	   container.appendChild(div);
+	 }
+	}
+        addgames(allgamescontainer, allgames)
+	addgames(newcontainer, newgames)
+      });
+      function search() {
+        var x = document.getElementsByClassName("appcaption");
+        var search = document.getElementById("searchbar").value.toUpperCase();
+        for (let i = 0; i < x.length; i++) {
+          if (x[i].innerHTML.toUpperCase().includes(search)) {
+            x[i].parentElement.style.display = 'block';
+          } else {
+            x[i].parentElement.style.display = 'none';
+          }
+        }
+      }
+	    
     </script>
   </head>
   <body>
@@ -197,15 +373,36 @@
       <a href="home">Home</a>
       <a class="Games" href="https://legalizenuclearbombs3.github.io">Games</a>
       <a href="other">Other</a>
-     
-         
+      <a class="active" href="https://legalizenuclearbombs3.github.io/test">Test</a>
+      <div class="search-container">
+        <input id="searchbar" type="text" placeholder="Search for game.." name="search">
+        <button onclick="search()">
+          <img src="search.png" height=20px width=20px>
+        </button>
+      </div>
+    </div>
     <div class="container">
       <img src="banner.png" alt="banner" width=100%>
-      <div class="absolute centered title">LNB Test</div>
+      <div class="absolute centered title">Legalize Nuclear Bombs</div>
     </div>
-
-   
- 
-  
+    <div class="important-message">
+      <p class="important-text">[New] !!IMPORTANT!!</p>
+      <p class="important-description">
+        The new official LNB phone number is (334) 246-4922. This is a text only number, please do not call it. <br>
+	[Old]- Due to the surprisingly large amount of people who have started using LNB this year,
+        we will continue to update the site and add new games to it.<br><br>
+	The 404 error for most games has been fixed.<br><br>
+	Search bar has also been fixed.<br><br>
+	Note: FNF does not work, it will be fixed soon.
+      </p>
+    </div>
+    <div class="buttonscontainer">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-4P1EWa8E4ig63Oyl05VNuVVc85rJYDNRmHhXGQBaMuPYYQ/viewform?usp=sf_link" class="button">Recommend a Game</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVgqcurXhwx5pLRoRG1szA-Rf7DbH7bwqeHQr23-jqo6x9pg/viewform?usp=sf_link" class="button">Report an Issue</a>
+    </div>
+    <img src="gamedividers/gamedivider1.png" width=100%>
+    <div id="newcontainer"></div>
+    <img src="gamedividers/gamedivider2.png" width=100%>
+    <div id="appscontainer"></div>
   </body>
 </html>
