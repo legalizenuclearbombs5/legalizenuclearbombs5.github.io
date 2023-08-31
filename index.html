@@ -14,7 +14,7 @@
       gtag('js', new Date());
       gtag('config', 'G-F3FCMH0MRC');
     </script>
-    <title>LNB - Documentaries</title>
+    <title>LNB Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       * {
@@ -152,6 +152,27 @@
         color: white;
       }
 
+      .topnav .search-container {
+        float: right;
+      }
+
+      .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-radius: 0px;
+      }
+
+      .topnav .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #575757;
+        font-size: 5px;
+        border: none;
+        cursor: pointer;
       }
       .important-message {
         text-align: center;
@@ -331,17 +352,7 @@
         addgames(allgamescontainer, allgames)
 	addgames(newcontainer, newgames)
       });
-      function search() {
-        var x = document.getElementsByClassName("appcaption");
-        var search = document.getElementById("searchbar").value.toUpperCase();
-        for (let i = 0; i < x.length; i++) {
-          if (x[i].innerHTML.toUpperCase().includes(search)) {
-            x[i].parentElement.style.display = 'block';
-          } else {
-            x[i].parentElement.style.display = 'none';
-          }
-        }
-      }
+
 	    
     </script>
   </head>
@@ -355,7 +366,7 @@
       <a class="active" href="https://legalizenuclearbombs3.github.io">Games</a>
       <a href="other">Other</a>
 
- </div>
+    </div>
     <div class="container">
       <img src="banner.png" alt="banner" width=100%>
       <div class="absolute centered title">Legalize Nuclear Bombs</div>
