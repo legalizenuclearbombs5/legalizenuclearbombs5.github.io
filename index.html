@@ -374,7 +374,7 @@
     <div class="important-message">
       <p class="important-text"></p>
       <p class="important-description">
-     <form onsubmit="search(); return false;">
+<form>
   <div style="position:relative; display:inline-block;">
     <span style="position:absolute; top:50%; left:0px; transform: translateY(-50%); color:white; font-size:20px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white">
@@ -399,16 +399,15 @@ function search() {
   }
 }
 
-document.getElementById("searchbar").addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    search();
-  }
+document.getElementById("searchbar").addEventListener("input", function() {
+  search();
 });
 
 document.querySelector("svg").addEventListener("click", function() {
   search();
 });
 </script>
+
 
       </p>
     </div>
