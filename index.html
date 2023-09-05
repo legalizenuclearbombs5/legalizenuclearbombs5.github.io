@@ -79,6 +79,13 @@
         column-gap: 10px;
         grid-template-columns: repeat(6, minmax(0, 1fr)); minmax(0, 1fr);
       }
+      #fixedcontainer {
+        display: grid;
+        align-items: center;
+        grid: auto auto auto auto auto auto auto auto auto auto auto/auto auto auto auto auto auto;
+        column-gap: 10px;
+        grid-template-columns: repeat(6, minmax(0, 1fr)); minmax(0, 1fr);
+      }
 
       .buttonscontainer {
         display: grid;
@@ -198,12 +205,17 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+
+	var fixedgames = [
+	    { link: "bitlife", icon: "", caption: "BitLife" }
+	];
 	      
 	var newgames = [
 	    { link: "fnf", icon: "", caption: "Friday Night Funkin'" },
 	    { link: "myrustysubmarine", icon: "", caption: "My Rusty Submarine" },
 	    { link: "btd4", icon: "", caption: "Bloons Tower Defense 4" },
-	    { link: "bobtherobber2", icon: "", caption: "Bob the Robber 2" }
+	    { link: "bobtherobber2", icon: "", caption: "Bob the Robber 2" },
+	    { link: "adanceoficeandfire", icon: "", caption: "A Dance of Fire and Ice" }
 	];
 
         var allgames = [
@@ -290,7 +302,7 @@
 	    { link: "wheely2/game.html", icon: "wheely2", caption: "Wheely 2" },
 	    { link: "Madalin%20Stunt%20Cars", icon: "madalinstuntcars", caption: "Madalin Stunt Cars" },
 	    { link: "motox3m/game.html", icon: "motox3m", caption: "Moto X3M" },
-	    { link: "BitLife", icon: "bitlife", caption: "BitLife" },
+	    { link: "bitlife", icon: "", caption: "BitLife" },
 	    { link: "Getting%20Over%20It", icon: "@gettingoverit", caption: "Getting Over It" },
 	    { link: "8%20Ball%20Pool", icon: "8ballpool", caption: "8 Ball Pool" },
 	    { link: "trafficmania/game.html", icon: "trafficmania", caption: "Traffic Mania" },
@@ -319,6 +331,7 @@
        }
        var allgamescontainer = document.getElementById("appscontainer");
        var newgamescontainer = document.getElementById("newcontainer");
+       var fixedgamescontainer = document.getElementById("fixedcontainer");
        function addgames(container, games) {
 	 games.sort(compare);
 	 for (let j = 0; j < games.length; j++) {
@@ -351,8 +364,9 @@
     	   container.appendChild(div);
 	 }
 	}
-        addgames(allgamescontainer, allgames)
-	addgames(newcontainer, newgames)
+        addgames(allgamescontainer, allgames);
+	addgames(newcontainer, newgames);
+	addgames(fixedcontainer, fixedgames);
       });
 
 	    
@@ -419,6 +433,8 @@ document.querySelector("svg").addEventListener("click", function() {
     </div>
     <img src="gamedividers/gamedivider1.png" width=100%>
     <div id="newcontainer"></div>
+    <img src="gamedividers/gamedivider3.png" width=100%>
+    <div id="fixedcontainer"></div>
     <img src="gamedividers/gamedivider2.png" width=100%>
     <div id="appscontainer"></div>
   </body>
