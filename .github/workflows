@@ -1,0 +1,55 @@
+name: Sync Changes
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v2
+
+      - name: Push changes to other repositories
+        run: |
+          git config --global user.email "legalizenuclearbombs3@gmail.com"
+          git config --global user.name "legalizenuclearbombs5"
+
+          # Define URL and Token pairs as variables
+          URL1="https://github.com/auburnschools/auburnschools.github.io.git"
+          TOKEN1="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"
+
+          URL2="https://github.com/DestinySearch/destinysearch.github.io.git"
+          TOKEN2="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"
+
+          URL3="https://github.com/Flocabulary/flocabulary.github.io.git"
+          TOKEN3="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"
+
+          URL4="https://github.com/auburncs/auburncs.github.io.git"
+          TOKEN4="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"
+
+          # Create an array of URL and Token pairs
+          URLS=("$URL1" "$URL2" "$URL3" "$URL4")
+          TOKENS=("$TOKEN1" "$TOKEN2" "$TOKEN3" "$TOKEN4")
+
+          # Loop through the pairs and synchronize changes
+          for i in ${!URLS[@]}; do
+            # Clone the repository
+            git clone "${URLS[i]}" temp_repo
+            cd temp_repo
+
+            # Fetch the latest changes from the main repository
+            git fetch origin main
+
+            # Merge changes from main into the current branch
+            git merge origin/main
+
+            # Push the changes back to the remote repository
+            git push origin main
+
+            cd ..
+            rm -rf temp_repo
+          done
