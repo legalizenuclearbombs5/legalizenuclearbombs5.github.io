@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>10 Minutes Till Dawn</title>
-    <script src="Build/UnityLoader.js"></script>
-    <link rel="icon" href="icon.png">
-    <script>
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="10MinutesTillDawn" />
+  <Content type="html"><![CDATA[
+    &lt;script&gt;
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/10MinutesTillDawnWebGL.json");
       var scaleToFit;
       try {
@@ -14,7 +10,6 @@
       } catch (e) {
         scaleToFit = true;
       }
-
       function onResize() {
         var canvas = gameInstance.Module.canvas;
         var container = gameInstance.container;
@@ -35,15 +30,15 @@
           w = 1200;
           h = 675;
         }
-
         container.style.width = canvas.style.width = w + "px";
         container.style.height = canvas.style.height = h + "px";
         container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
         container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
       }
       window.addEventListener("resize", onResize);
-    </script>
-    <style>
+
+    &lt;/script&gt;
+    &lt;style&gt;
       html,
       body {
         background: #000;
@@ -75,10 +70,7 @@
         image-rendering: pixelated;
         -ms-interpolation-mode: nearest-neighbor;
       }
-    </style>
-  </head>
-
-  <body onload="onResize();">
-    <div id="gameContainer" data-pixelated="true"></div>
-  </body>
-</html>
+    &lt;/style&gt;
+    &lt;div id="gameContainer" data-pixelated="true"&gt;&lt;/div&gt;
+  ]]></Content>
+</Module>
