@@ -379,17 +379,42 @@
       </a>
       <a class="title">Legalize Nuclear Bombs</a>
       <a href="home">Home</a>
-      <a class="active" href="https://legalizenuclearbombs5.github.io">Games</a>
+      <a id="randomLink" class="active" href="#">Games</a>
       <a href="other">Other</a>
 
+<script>
+ 
+  var links = [
+    "https://destinysearch.github.io/",
+    "https://auburnschools.github.io/",
+    "https://flocabulary.github.io/",
+    "https://auburncs.github.io/"
+  ];
+
+
+  function redirectToRandomLink() {
+    
+    var randomIndex = Math.floor(Math.random() * links.length);
+
+    
+    var linkElement = document.getElementById("randomLink");
+
+   
+    linkElement.href = links[randomIndex];
+  }
+
+
+  document.getElementById("randomLink").addEventListener("click", redirectToRandomLink);
+</script>
+	    
     </div>
     <div class="container">
       <img src="banner.png" alt="banner" width=100%>
       <div class="absolute centered title">Legalize Nuclear Bombs</div>
     </div>
     <div class="important-message">
-      <p class="important-text">!!!VERY IMPORTANT PLEASE READ!!!</p>
-      <p class="important-description">TELL EVERYONE YOU SEE ABOUT THE NEW LNB URL!!!!! On Friday, LNB was blocked. We are doing things to protect LNB in the future if it is blocked again. We have made an LNB status page which shows information on what is going on with LNB and what we will do in the event that another event like this happens. The link for the LNB status page is <a href="https://sites.google.com/view/legalizenuclearbombs5">https://sites.google.com/view/legalizenuclearbombs5</a>. Make sure to BOOKMARK THE STATUS PAGE!! We are also working on completely redesigning the home page. Also, IT people ik we aren't on the best terms rn but i think we can make this work out if we're just honest with eachother. We can talk in private on the <a href="https://discord.gg/35H7BhUWNZ">LNB Discord Server</a>. <br> <br>
+      <p class="important-text">Please Join Our Discord</p>
+      <p class="important-description">Please join our <a href="https://discord.gg/35H7BhUWNZ">Discord Server</a>. <br> <br>
 
 <form>
   <div style="position:relative; display:inline-block;">
